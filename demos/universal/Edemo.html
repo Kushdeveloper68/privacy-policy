@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cosmoss Events | Luxury Event Planning</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Hanken+Grotesk:wght@300;400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "on-secondary": "#3e2e00",
+                        "outline": "#99907c",
+                        "surface-container-highest": "#343535",
+                        "surface-tint": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-container": "#d7b96a",
+                        "tertiary": "#d1cecd",
+                        "primary-fixed-dim": "#e9c349",
+                        "secondary": "#e3c373",
+                        "on-primary-fixed": "#241a00",
+                        "background": "#050505",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-lowest": "#0d0e0f",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-container-low": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface": "#121414",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed-variant": "#594400",
+                        "on-tertiary": "#313030",
+                        "surface-bright": "#38393a",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary-container": "#b5b2b2",
+                        "primary-container": "#d4af37",
+                        "primary": "#f2ca50",
+                        "surface-variant": "#343535",
+                        "on-surface-variant": "#d0c5af",
+                        "outline-variant": "#4d4635",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "surface-container": "#1e2020",
+                        "on-primary": "#3c2f00",
+                        "on-error": "#690005",
+                        "surface-container-high": "#292a2a",
+                        "inverse-surface": "#e3e2e2",
+                        "on-background": "#e3e2e2",
+                        "surface-dim": "#121414",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#464544",
+                        "inverse-primary": "#735c00",
+                        "secondary-container": "#5e4800",
+                        "on-primary-container": "#554300",
+                        "secondary-fixed-dim": "#e3c373",
+                        "on-surface": "#e3e2e2",
+                        "secondary-fixed": "#ffdf91"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "safe-margin": "80px",
+                        "section-gap": "160px",
+                        "element-gap": "24px",
+                        "safe-margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"],
+                        "display-hero-mobile": ["Playfair Display"],
+                        "display-hero": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "display-hero-mobile": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-hero": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e3e2e2;
+            overflow-x: hidden;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .noise-overlay {
+            position: fixed;
+            inset: 0;
+            background: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .shimmer-gold {
+            background: linear-gradient(90deg, #D4AF37 0%, #EBCB7A 50%, #D4AF37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .glass-card {
+            background: rgba(16, 16, 16, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .glass-card:hover {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .magnetic-btn {
+            transition: transform 0.2s ease-out;
+        }
+
+        .timeline-connector {
+            background: linear-gradient(to bottom, transparent, #D4AF37, transparent);
+            width: 1px;
+        }
+
+        .scroll-indicator::after {
+            content: '';
+            width: 1px;
+            height: 60px;
+            background: #D4AF37;
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            animation: scrollLine 2s infinite ease-in-out;
+        }
+
+        @keyframes scrollLine {
+            0% {
+                height: 0;
+                top: 0;
+            }
+
+            50% {
+                height: 60px;
+                top: 0;
+            }
+
+            100% {
+                height: 0;
+                top: 60px;
+            }
+        }
+
+        .masonry-item {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+        }
+
+        .masonry-item:hover {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+
+<body class="dark selection:bg-primary-container/30">
+    <div class="noise-overlay"></div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 sm:px-8 md:px-safe-margin py-5 md:py-8 transition-all duration-500 bg-transparent"
+        id="top-nav">
+        <div class="flex w-full items-center justify-between md:w-auto md:flex-none">
+            <div class="font-headline-md text-headline-md text-primary tracking-tighter cursor-pointer">Cosmoss Events</div>
+            <button
+                id="nav-toggle"
+                class="md:hidden inline-flex items-center justify-center rounded-full border border-primary/20 bg-[#050505]/80 p-3 text-primary backdrop-blur-xl transition-colors duration-300 hover:border-primary/40"
+                aria-expanded="false"
+                aria-controls="mobile-nav"
+                aria-label="Open navigation menu">
+                <span class="material-symbols-outlined text-[24px]" id="nav-toggle-icon">menu</span>
+            </button>
+        </div>
+        <div class="hidden md:flex items-center gap-12">
+            <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1"
+                href="#">Portfolio</a>
+            <a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300"
+                href="#">Services</a>
+            <a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300"
+                href="#">Experience</a>
+            <a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300"
+                href="#">About</a>
+            <a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300"
+                href="#">Contact</a>
+        </div>
+        <button
+            class="magnetic-btn hidden md:inline-flex bg-primary-container text-on-primary-container px-8 py-3 font-label-caps text-label-caps hover:scale-105 transition-all duration-300">
+            Book Consultation
+        </button>
+        <div id="mobile-nav"
+            class="hidden md:hidden basis-full w-full flex flex-col items-start gap-4 rounded-2xl border border-primary/10 bg-[#050505]/95 p-4 shadow-2xl backdrop-blur-xl">
+            <a class="w-full font-label-caps text-label-caps text-primary border-b border-primary/40 pb-2 text-left" href="#">Portfolio</a>
+            <a class="w-full font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300 text-left"
+                href="#">Services</a>
+            <a class="w-full font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300 text-left"
+                href="#">Experience</a>
+            <a class="w-full font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300 text-left"
+                href="#">About</a>
+            <a class="w-full font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300 text-left"
+                href="#">Contact</a>
+            <button
+                class="magnetic-btn w-full bg-primary-container text-on-primary-container px-8 py-3 font-label-caps text-label-caps transition-all duration-300 text-left">
+                Book Consultation
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen flex items-center px-8 md:px-safe-margin overflow-hidden">
+        <!-- STITCH_SHADER_START:ANIMATION_2 class="absolute inset-0 w-full h-full opacity-60" -->
+        <div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+            <canvas id="shader-canvas-ANIMATION_2" style="display:block;width:100%;height:100%"></canvas>
+            <script>
+                    (function () {
+                        const canvas = document.getElementById('shader-canvas-ANIMATION_2');
+
+                        // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+                        // This fires on initial layout and whenever the element is resized.
+                        function syncSize() {
+                            const w = canvas.clientWidth || 1280;
+                            const h = canvas.clientHeight || 720;
+                            if (canvas.width !== w || canvas.height !== h) {
+                                canvas.width = w;
+                                canvas.height = h;
+                            }
+                        }
+                        if (typeof ResizeObserver !== 'undefined') {
+                            new ResizeObserver(syncSize).observe(canvas);
+                        }
+                        syncSize();
+
+                        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                        if (!gl) return;
+                        const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+                        const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+float noise(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Deep luxury dark background
+    vec3 color = vec3(0.02, 0.02, 0.02);
+    
+    // Golden atmospheric glow
+    vec2 glowPos = vec2(0.8, 0.2);
+    float glow = 0.4 / (distance(uv, glowPos + 0.1 * vec2(sin(u_time * 0.5), cos(u_time * 0.3))));
+    color += vec3(0.83, 0.68, 0.21) * glow * 0.15;
+    
+    // Moving particles (simulated via noise and time)
+    vec2 particleUv = uv * 20.0;
+    particleUv.y += u_time * 0.5;
+    float n = noise(floor(particleUv));
+    if (n > 0.98) {
+        float spark = pow(sin(u_time * n * 5.0) * 0.5 + 0.5, 10.0);
+        color += vec3(0.92, 0.8, 0.48) * spark * 0.3;
+    }
+    
+    // Vignette
+    float vignette = 1.0 - smoothstep(0.5, 1.5, length(uv - 0.5));
+    color *= vignette;
+    
+    gl_FragColor = vec4(color, 1.0);
+}`;
+                        function cs(type, src) {
+                            const s = gl.createShader(type);
+                            gl.shaderSource(s, src);
+                            gl.compileShader(s);
+                            return s;
+                        }
+                        const prog = gl.createProgram();
+                        gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+                        gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+                        gl.linkProgram(prog);
+                        gl.useProgram(prog);
+                        const buf = gl.createBuffer();
+                        gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+                        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+                        const pos = gl.getAttribLocation(prog, 'a_position');
+                        gl.enableVertexAttribArray(pos);
+                        gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+                        const uTime = gl.getUniformLocation(prog, 'u_time');
+                        const uRes = gl.getUniformLocation(prog, 'u_resolution');
+                        const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+                        // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+                        // Shaders that need normalized coords should use: u_mouse / u_resolution.
+                        let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+                        window.addEventListener('mousemove', (event) => {
+                            const rect = canvas.getBoundingClientRect();
+                            if (rect.width && rect.height) {
+                                const nx = (event.clientX - rect.left) / rect.width;
+                                const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+                                mouse.x = nx * canvas.width;
+                                mouse.y = ny * canvas.height;
+                            }
+                        });
+
+                        function render(t) {
+                            if (typeof ResizeObserver === 'undefined') syncSize();
+                            gl.viewport(0, 0, canvas.width, canvas.height);
+                            if (uTime) gl.uniform1f(uTime, t * 0.001);
+                            if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+                            if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+                            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+                            requestAnimationFrame(render);
+                        }
+                        render(0);
+                    })();
+            </script>
+        </div>
+        <!-- STITCH_SHADER_END:ANIMATION_2 -->
+        <div class="relative z-10 max-w-4xl pt-20">
+            <h1
+                class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface leading-none mb-8 reveal-up active">
+                Crafting <span class="shimmer-gold italic">Unforgettable</span> Moments.
+            </h1>
+            <p class="font-body-lg text-body-lg text-outline mb-12 max-w-2xl reveal-up active"
+                style="transition-delay: 200ms;">
+                Creating timeless celebrations with passion, creativity and flawless execution across weddings,
+                engagements, birthdays and luxury events.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 reveal-up active" style="transition-delay: 400ms;">
+                <button
+                    class="magnetic-btn bg-primary-container text-on-primary-container px-10 py-5 font-label-caps text-label-caps hover:shadow-[0_0_60px_rgba(212,175,55,0.3)] transition-all duration-500">
+                    Book Consultation
+                </button>
+                <button
+                    class="magnetic-btn border border-primary/40 text-primary px-10 py-5 font-label-caps text-label-caps hover:bg-primary/5 transition-all duration-300">
+                    Explore Portfolio
+                </button>
+            </div>
+        </div>
+        <!-- Floating Glass Cards -->
+        <div class="hidden lg:block absolute right-safe-margin top-1/2 -translate-y-1/2 flex flex-col gap-8">
+            <div class="glass-card p-8 rounded-[24px] reveal-up active" style="transition-delay: 600ms;">
+                <div class="text-primary font-headline-md text-headline-md mb-1">500+</div>
+                <div class="font-label-caps text-label-caps text-outline uppercase">Events Delivered</div>
+            </div>
+            <div class="glass-card p-8 rounded-[24px] translate-x-12 reveal-up active" style="transition-delay: 800ms;">
+                <div class="text-primary font-headline-md text-headline-md mb-1">10+</div>
+                <div class="font-label-caps text-label-caps text-outline uppercase">Years of Excellence</div>
+            </div>
+        </div>
+        <div class="absolute bottom-20 left-1/2 -translate-x-1/2 scroll-indicator"></div>
+    </header>
+    <!-- About Section -->
+    <section
+        class="w-full px-8 md:px-safe-margin py-section-gap grid grid-cols-1 md:grid-cols-2 gap-gutter items-center overflow-hidden">
+        <div class="reveal-up">
+            <div class="relative group aspect-[4/5] overflow-hidden rounded-[24px]">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                    data-alt="A grand luxury wedding hall interior with high vaulted ceilings, gold leaf detailing on the walls, and dozens of crystal chandeliers hanging from above. The lighting is warm and amber, creating a glow that reflects off polished marble floors. White floral arrangements and gold-rimmed glassware are visible in the foreground, evoking an atmosphere of extreme opulence and cinematic scale."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWkP4_o8EVndi50PErvdTzA5VVORMG6ndCAgUAlyZtcox_ixS5NxP-QEQ857FctC_7wNwhnmHQS81QRoPrj4xEbXxftfGDC0WoOgDr_V0dSbvBdXCd9XRIX4-_ud6g_ApvshDKUEnw2hOZP0laqxMRHTQrk5aeZLy8L6Y18YbuTKFaIUpgVOzX6S6xnHrxxZm5vXDfmZ3tEb3BPnWOSzM-18JaXdKGOO96FUbtNecgR-gZnqYSl7gfcoAnM6Vk_yeEBoZNTiWas3Dx')">
+                </div>
+                <div class="absolute inset-0 border-[20px] border-[#050505]"></div>
+            </div>
+        </div>
+        <div class="reveal-up" style="transition-delay: 200ms;">
+            <h2 class="font-label-caps text-label-caps text-primary mb-6">Our Philosophy</h2>
+            <h3 class="font-headline-lg text-headline-lg mb-8">The Art of Atmosphere</h3>
+            <p class="font-body-lg text-body-lg text-outline mb-8 leading-relaxed">
+                At Cosmoss Events, we don't just plan events; we architect legacies. Every detail, from the acoustics of
+                the venue to the tactile quality of the invitations, is meticulously curated to reflect your unique
+                narrative.
+            </p>
+            <p class="font-body-md text-body-md text-outline/80 mb-12">
+                Our approach blends architectural precision with poetic design, ensuring that every celebration is not
+                only visually stunning but emotionally resonant for every guest in attendance.
+            </p>
+            <a class="font-label-caps text-label-caps text-primary border-b border-primary/40 pb-2 hover:border-primary transition-all"
+                href="#">Discover Our Story</a>
+        </div>
+    </section>
+    <!-- Trust Counters -->
+    <section class="w-full bg-surface-container-lowest py-24 px-8 md:px-safe-margin">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-24 text-center">
+            <div class="reveal-up">
+                <span class="block font-display-hero text-[80px] leading-none text-primary mb-4"
+                    data-count="500">500+</span>
+                <span class="font-label-caps text-label-caps text-outline">Bespoke Events</span>
+            </div>
+            <div class="reveal-up" style="transition-delay: 200ms;">
+                <span class="block font-display-hero text-[80px] leading-none text-primary mb-4"
+                    data-count="1000">1000+</span>
+                <span class="font-label-caps text-label-caps text-outline">Global Guests</span>
+            </div>
+            <div class="reveal-up" style="transition-delay: 400ms;">
+                <span class="block font-display-hero text-[80px] leading-none text-primary mb-4"
+                    data-count="100">100+</span>
+                <span class="font-label-caps text-label-caps text-outline">Weddings Celebrated</span>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="w-full px-8 md:px-safe-margin py-section-gap">
+        <div class="text-center mb-24 reveal-up">
+            <h2 class="font-label-caps text-label-caps text-primary mb-4">Exquisite Expertise</h2>
+            <h3 class="font-headline-lg text-headline-lg">Our Curated Services</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="glass-card p-12 rounded-[24px] reveal-up">
+                <span class="material-symbols-outlined text-primary text-5xl mb-8">favorite</span>
+                <h4 class="font-headline-md text-headline-md mb-6">Weddings</h4>
+                <p class="font-body-md text-outline mb-8">From intimate elopements to grand galas, we design weddings
+                    that are a pure reflection of your love story.</p>
+                <ul class="space-y-4 font-label-caps text-[10px] text-primary">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> FULL
+                        PLANNING</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        ARTISTIC DIRECTION</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> VENDOR
+                        CURATION</li>
+                </ul>
+            </div>
+            <div class="glass-card p-12 rounded-[24px] reveal-up" style="transition-delay: 200ms;">
+                <span class="material-symbols-outlined text-primary text-5xl mb-8">celebration</span>
+                <h4 class="font-headline-md text-headline-md mb-6">Milestones</h4>
+                <p class="font-body-md text-outline mb-8">Elevating birthdays, anniversaries, and personal achievements
+                    into cinematic experiences that last forever.</p>
+                <ul class="space-y-4 font-label-caps text-[10px] text-primary">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> THEMED
+                        CONCEPTUALIZATION</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        IMMERSIVE DECOR</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        ENTERTAINMENT</li>
+                </ul>
+            </div>
+            <div class="glass-card p-12 rounded-[24px] reveal-up" style="transition-delay: 400ms;">
+                <span class="material-symbols-outlined text-primary text-5xl mb-8">business_center</span>
+                <h4 class="font-headline-md text-headline-md mb-6">Corporate</h4>
+                <p class="font-body-md text-outline mb-8">Bespoke corporate activations and luxury gala dinners that
+                    align perfectly with your brand identity.</p>
+                <ul class="space-y-4 font-label-caps text-[10px] text-primary">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> BRAND
+                        INTEGRATION</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        LOGISTICAL MASTERY</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> MEDIA
+                        MANAGEMENT</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Masonry -->
+    <section class="w-full px-8 md:px-safe-margin py-section-gap overflow-hidden">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal-up">
+            <div>
+                <h2 class="font-label-caps text-label-caps text-primary mb-4">The Portfolio</h2>
+                <h3 class="font-headline-lg text-headline-lg">Our Recent Masterpieces</h3>
+            </div>
+            <div class="flex gap-8 border-b border-outline/20 pb-4">
+                <button class="font-label-caps text-[10px] text-primary uppercase tracking-widest">All Work</button>
+                <button
+                    class="font-label-caps text-[10px] text-outline hover:text-primary transition-colors uppercase tracking-widest">Weddings</button>
+                <button
+                    class="font-label-caps text-[10px] text-outline hover:text-primary transition-colors uppercase tracking-widest">Reception</button>
+                <button
+                    class="font-label-caps text-[10px] text-outline hover:text-primary transition-colors uppercase tracking-widest">Corporate</button>
+            </div>
+        </div>
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+            <div class="masonry-item relative group reveal-up overflow-hidden rounded-[24px]">
+                <img class="w-full object-cover"
+                    data-alt="A sophisticated outdoor wedding reception at dusk set in an Italian vineyard. Long wooden tables are adorned with hundreds of white candles and delicate green foliage. Strings of warm fairy lights are crisscrossed between ancient olive trees above. The overall mood is romantic, warm, and high-fashion, with a focus on natural materials and high-end lighting design."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYVnlbwh1b1S-43QFRVNTvlTQaTMNSegHDDh6tKZzE7fDif8qQXcPcLwIhnJbzrQNEQqvIp8icxJBlj_jwl-AI3yd_4CeiA2w7N98bLI5BJRKjmqc6n7jNVY8TTfghwioKx0FvDyaj0rkeVR1mxGbIeBQUqxQpqtQVFKPdoiSMYIjV0stqkl0yT8O76fepBKRYrxvUipx9RH3-kbMnlAZRL3Wxc_HuRYhE3CVZWffXTIAAW2RbwaNKg00XA7Ck_fSIHNRS44BwRkQs" />
+                <div
+                    class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <h5 class="font-headline-md text-headline-md text-primary">The Vineyard Vows</h5>
+                    <p class="font-label-caps text-[10px] text-white/70 uppercase">Tuscany, Italy</p>
+                </div>
+            </div>
+            <div class="masonry-item relative group reveal-up overflow-hidden rounded-[24px]"
+                style="transition-delay: 100ms;">
+                <img class="w-full object-cover"
+                    data-alt="A modern luxury penthouse birthday party featuring a sleek black and gold color palette. In the center, a tiered gold-accented cake stands on a black marble pedestal, surrounded by abstract floral sculptures made of golden metal and black lilies. Large floor-to-ceiling windows show the city skyline at night. The lighting is moody with purple and gold neon accents."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8prYuSabS4Tz4GC4rXvr6fkLrcXmB5y2P3-NrWB14QkNsv5Mh9MoHca_dpKeefQ21MClT3TWTHkK-gfAgrWZvyAkrF1xVu1CaUo9OgejBuc_9JpsF60g_odCwf-O3umxcnJrEsTkJ1DVPzpYlDqLW4dHOIejp1o7FssPv22Nb-xDVhtBzfTvKcWfkoXeL5lAM_KyP0vSG0YYt850bwi07cz9b7ng_dyvdLBX8bLkFjM5x-puugW4nL3hP7FEGwUgRZt4DhhqVowRu" />
+                <div
+                    class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <h5 class="font-headline-md text-headline-md text-primary">Noir Celebration</h5>
+                    <p class="font-label-caps text-[10px] text-white/70 uppercase">New York, NY</p>
+                </div>
+            </div>
+            <div class="masonry-item relative group reveal-up overflow-hidden rounded-[24px]"
+                style="transition-delay: 200ms;">
+                <img class="w-full object-cover"
+                    data-alt="A minimalist high-fashion corporate gala held in a white contemporary art gallery. The decor consists of massive geometric light installations in monochromatic tones. Guests in elegant formal attire are seen blurred in the background, interacting. The focus is on a single long table with architectural floral centerpieces of white orchids and silver elements."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUv_OxgzdBSqBC5vLrvOHatZ0-x2p0OjfsrfIKg3fimVn9njUg6ZPsar7Yn0XfKzdJ1X-s_8PCfUuE-L3KhXn1eY2d4S6KWvysDP5Ul_3Q8105U5W20WerJqZ7uvZZVKIHrFqbAhRp79-uD2X9K8d_2TgtNd1xqMxV0Bjjb4c9vve3oXmiRKuioaoUU_31rR22Uh4GwlH55x4ELuNb2O5PCRnwc6etjeRHkZYSxY83sJjwU_lMYXBDTcNo10sHRlVBvtlSFjaZmkZr" />
+                <div
+                    class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <h5 class="font-headline-md text-headline-md text-primary">Tech Vision Gala</h5>
+                    <p class="font-label-caps text-[10px] text-white/70 uppercase">London, UK</p>
+                </div>
+            </div>
+            <div class="masonry-item relative group reveal-up overflow-hidden rounded-[24px]"
+                style="transition-delay: 300ms;">
+                <img class="w-full object-cover"
+                    data-alt="A close-up shot of a high-end luxury event table setting. Fine bone china plates are stacked on a textured gold charger. The cutlery is matte gold, and the crystal glassware is tall and delicate. A custom-letterpressed menu card with gold foil edges sits atop the napkin. Soft candle lighting creates sparkling reflections on the crystal and gold surfaces."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9cyoz9RiylUgAfwg4XnMcJXVl6D5ESGqaVjEougWIkEQUrGM1KNsfuwjRtt-trZfu0H-9tXSOzuYCOm1pf9aQKS9k5v-VOwSTvtEjvuRI_V6ymWPXe14dA2v5Tetfms9Q9VCCGZXQDiKn9IvEoCRVpI3zvWMwv-FuWAPMmiSK99LJTG7_ZKSsyX5rPHHQvdBUlLTWlt6OpK3YNCC-MI3UjOviSQq2QkmVPouyOyCx5RQYQmsEo817Y8q4lVO84y0fpdVrw719sDrA" />
+                <div
+                    class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <h5 class="font-headline-md text-headline-md text-primary">Details of Opulence</h5>
+                    <p class="font-label-caps text-[10px] text-white/70 uppercase">Paris, France</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Timeline -->
+    <section class="w-full px-8 md:px-safe-margin py-section-gap">
+        <div class="text-center mb-24 reveal-up">
+            <h2 class="font-label-caps text-label-caps text-primary mb-4">The Journey</h2>
+            <h3 class="font-headline-lg text-headline-lg">Your Experience with Cosmoss</h3>
+        </div>
+        <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start">
+            <div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline/10 hidden md:block"></div>
+            <div class="relative z-10 flex flex-col items-center text-center px-4 mb-16 md:mb-0 reveal-up">
+                <div class="w-4 h-4 bg-primary rounded-full mb-8 shadow-[0_0_20px_rgba(212,175,55,1)]"></div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-2">DREAM</h6>
+                <p class="text-outline text-sm max-w-[150px]">The initial vision session.</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center px-4 mb-16 md:mb-0 reveal-up"
+                style="transition-delay: 100ms;">
+                <div class="w-4 h-4 bg-primary/40 rounded-full mb-8"></div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-2">PLANNING</h6>
+                <p class="text-outline text-sm max-w-[150px]">Logistical blueprints &amp; strategy.</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center px-4 mb-16 md:mb-0 reveal-up"
+                style="transition-delay: 200ms;">
+                <div class="w-4 h-4 bg-primary/40 rounded-full mb-8"></div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-2">DESIGN</h6>
+                <p class="text-outline text-sm max-w-[150px]">Visual &amp; tactile curation.</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center px-4 mb-16 md:mb-0 reveal-up"
+                style="transition-delay: 300ms;">
+                <div class="w-4 h-4 bg-primary/40 rounded-full mb-8"></div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-2">EXECUTION</h6>
+                <p class="text-outline text-sm max-w-[150px]">Seamless management on-site.</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center px-4 reveal-up"
+                style="transition-delay: 400ms;">
+                <div class="w-4 h-4 bg-primary/40 rounded-full mb-8"></div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-2">CELEBRATION</h6>
+                <p class="text-outline text-sm max-w-[150px]">The pinnacle moment of joy.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Consultation Section -->
+    <section class="w-full px-8 md:px-safe-margin py-section-gap">
+        <div
+            class="max-w-6xl mx-auto glass-card rounded-[40px] p-12 md:p-24 grid grid-cols-1 lg:grid-cols-2 gap-24 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+            <div class="reveal-up relative z-10">
+                <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8 leading-tight">Begin Your
+                    <br /><span class="shimmer-gold italic">Cosmoss</span> Story</h3>
+                <p class="font-body-lg text-body-lg text-outline mb-12">
+                    Schedule a private consultation with our principal planners to discuss your vision for excellence.
+                </p>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div>
+                            <p class="font-label-caps text-[10px] text-outline mb-1 uppercase tracking-widest">HQ Studio
+                            </p>
+                            <p class="font-body-md">Mayfair, London | Upper East Side, NY</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                        <div>
+                            <p class="font-label-caps text-[10px] text-outline mb-1 uppercase tracking-widest">Enquiries
+                            </p>
+                            <p class="font-body-md">curated@cosmossevents.luxury</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-up relative z-10" style="transition-delay: 200ms;">
+                <form class="space-y-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="relative group">
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline/30 py-4 focus:ring-0 focus:border-primary transition-all font-label-caps text-[10px] placeholder:text-outline/40"
+                                placeholder="FULL NAME" type="text" />
+                        </div>
+                        <div class="relative group">
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline/30 py-4 focus:ring-0 focus:border-primary transition-all font-label-caps text-[10px] placeholder:text-outline/40"
+                                placeholder="EMAIL ADDRESS" type="email" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="relative group">
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline/30 py-4 focus:ring-0 focus:border-primary transition-all font-label-caps text-[10px] text-outline/40 uppercase"
+                                type="date" />
+                        </div>
+                        <div class="relative group">
+                            <select
+                                class="w-full bg-transparent border-0 border-b border-outline/30 py-4 focus:ring-0 focus:border-primary transition-all font-label-caps text-[10px] text-outline/40 uppercase">
+                                <option disabled="" selected="" value="">ESTIMATED BUDGET</option>
+                                <option>$50k - $100k</option>
+                                <option>$100k - $500k</option>
+                                <option>$500k+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <textarea
+                            class="w-full bg-transparent border-0 border-b border-outline/30 py-4 focus:ring-0 focus:border-primary transition-all font-label-caps text-[10px] placeholder:text-outline/40 resize-none"
+                            placeholder="TELL US ABOUT YOUR DREAM EVENT" rows="3"></textarea>
+                    </div>
+                    <button
+                        class="magnetic-btn w-full bg-primary-container text-on-primary-container py-6 font-label-caps text-label-caps tracking-widest hover:shadow-[0_0_40px_rgba(212,175,55,0.2)] transition-all">
+                        SEND ENQUIRY
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="relative w-full py-section-gap overflow-hidden bg-background">
+        <div class="absolute inset-0 opacity-40">
+            <div class="w-full h-full bg-cover bg-fixed bg-center"
+                data-alt="A cinematic, wide-angle shot of a luxurious fireworks display over a grand French chateau at night. The fireworks are all golden and white, illuminating the stone architecture of the palace and its perfectly manicured gardens. The reflection of the sparks is visible in a large pool in the foreground. The mood is triumphant, magical, and represents the ultimate celebration finale."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrDvMCY4ezWpPnWqHH127Puv6AwzyS9bMxkwVQF_Fj2g4swLtZSL1VSns7_K-K4mClTH4YBk3O30GQ0PICQodUqZg6Vo8fWF2UiM4OVb7ETLTo2H4WhdWRg3N-4qjVPdQ3g4EF6T-uB6ZEaUJO5d_PJfwrgzsssVu6esrPqqItHwL8JVqmVOXkaHuUD0QVLisqDnx7nP9I0p8R43JmCMRMe2T7P79QvX_zTn3e8URgaeWY1aMjIfkkIqvM2j-wKboHZcyNhysbHDlU')">
+            </div>
+        </div>
+        <div class="relative z-10 text-center px-8">
+            <h2
+                class="font-display-hero text-headline-lg-mobile md:text-[100px] text-on-surface leading-tight mb-16 reveal-up">
+                Let's Create Your <br /><span class="shimmer-gold italic">Dream</span> Celebration
+            </h2>
+            <button
+                class="magnetic-btn border border-primary text-primary px-16 py-6 font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all duration-500">
+                START PLANNING
+            </button>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full px-8 md:px-safe-margin py-24 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-24">
+            <div class="col-span-1 md:col-span-2">
+                <div class="font-headline-lg text-headline-lg text-primary mb-8">Cosmoss Events</div>
+                <p class="font-body-md text-outline max-w-sm mb-8">Defining the pinnacle of luxury celebrations.
+                    Available worldwide for extraordinary experiences.</p>
+                <div class="flex gap-6">
+                    <a class="text-outline hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="text-outline hover:text-primary transition-colors" href="#">Pinterest</a>
+                    <a class="text-outline hover:text-primary transition-colors" href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-8">Navigation</h6>
+                <ul class="space-y-4 font-body-md text-on-surface-variant">
+                    <li><a class="hover:text-primary transition-colors" href="#">Portfolio</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">The Experience</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Press &amp; Awards</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-label-caps text-label-caps text-primary mb-8">Legal</h6>
+                <ul class="space-y-4 font-body-md text-on-surface-variant">
+                    <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-12 border-t border-outline/5 font-label-caps text-[10px] text-outline/50">
+            © 2024 COSMOSS EVENTS. DEFINING THE PINNACLE OF LUXURY CELEBRATIONS.
+        </div>
+    </footer>
+    <script>
+        // Scroll Interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal-up');
+            const nav = document.getElementById('top-nav');
+            const navToggle = document.getElementById('nav-toggle');
+            const navToggleIcon = document.getElementById('nav-toggle-icon');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            const setMobileNavOpen = (isOpen) => {
+                mobileNav.classList.toggle('hidden', !isOpen);
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+                navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+                navToggleIcon.textContent = isOpen ? 'close' : 'menu';
+            };
+
+            navToggle.addEventListener('click', () => {
+                const isOpen = !mobileNav.classList.contains('hidden');
+                setMobileNavOpen(!isOpen);
+            });
+
+            mobileNav.querySelectorAll('a, button').forEach(item => {
+                item.addEventListener('click', () => setMobileNavOpen(false));
+            });
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            reveals.forEach(el => observer.observe(el));
+
+            // Navbar Transition
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    nav.classList.remove('py-8', 'bg-transparent');
+                    nav.classList.add('py-4', 'bg-[#050505]/90', 'backdrop-blur-xl', 'border-b', 'border-primary/10');
+                } else {
+                    nav.classList.add('py-8', 'bg-transparent');
+                    nav.classList.remove('py-4', 'bg-[#050505]/90', 'backdrop-blur-xl', 'border-b', 'border-primary/10');
+                }
+                if (window.innerWidth < 768) {
+                    setMobileNavOpen(false);
+                }
+            });
+
+            // Magnetic Buttons
+            const magneticButtons = document.querySelectorAll('.magnetic-btn');
+            magneticButtons.forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
+                });
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = `translate(0, 0) scale(1)`;
+                });
+            });
+
+            // Smooth Portfolio Blur reveal on scroll
+            const masonryItems = document.querySelectorAll('.masonry-item');
+            window.addEventListener('scroll', () => {
+                masonryItems.forEach(item => {
+                    const speed = 0.05;
+                    const rect = item.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    if (rect.top < windowHeight && rect.bottom > 0) {
+                        const shift = (windowHeight - rect.top) * speed;
+                        // Subtle parallax if desired
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

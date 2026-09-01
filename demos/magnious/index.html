@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Magnious Events</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;600&amp;family=Playfair+Display:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1d1c14",
+                        "on-primary": "#1b352d",
+                        "surface-variant": "#353535",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#8c928e",
+                        "on-primary-fixed": "#042018",
+                        "tertiary-fixed": "#e8e2d6",
+                        "on-tertiary": "#333028",
+                        "primary": "#afcdc1",
+                        "on-surface-variant": "#c1c8c4",
+                        "secondary-fixed": "#ffe088",
+                        "outline-variant": "#424845",
+                        "on-secondary": "#3c2f00",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "surface-bright": "#393939",
+                        "surface": "#131313",
+                        "surface-dim": "#131313",
+                        "primary-container": "#0f2a22",
+                        "on-secondary-container": "#342800",
+                        "on-primary-container": "#769388",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "primary-fixed-dim": "#afcdc1",
+                        "on-background": "#e4e2e1",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-container": "#27251e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "surface-container": "#1f2020",
+                        "tertiary": "#cbc6bb",
+                        "inverse-surface": "#e4e2e1",
+                        "secondary-container": "#af8d11",
+                        "surface-tint": "#afcdc1",
+                        "on-tertiary-container": "#908c82",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#314c43",
+                        "secondary": "#e9c349",
+                        "inverse-primary": "#49645a",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#e4e2e1",
+                        "primary-fixed": "#cbe9dd",
+                        "background": "#131313",
+                        "surface-container-low": "#1b1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max-width": "1440px",
+                        "section-padding": "120px",
+                        "unit": "8px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["EB Garamond"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["EB Garamond"],
+                        "accent-text": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "headline-md": ["EB Garamond"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "accent-text": ["24px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["44px", { "lineHeight": "52px", "fontWeight": "400" }],
+                        "headline-md": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-border {
+            border: 1px solid #D4AF37;
+        }
+
+        .text-gold {
+            color: #D4AF37;
+        }
+
+        .bg-cream {
+            background-color: #F5EFE3;
+        }
+
+        .text-cream {
+            color: #F5EFE3;
+        }
+
+        .hover-gold:hover {
+            background-color: #D4AF37;
+            color: #0F2A22;
+        }
+
+        /* Mobile menu */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-primary-container text-on-surface font-body-md overflow-x-hidden selection:bg-secondary selection:text-primary-container">
+    <!-- 1. NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent dark:bg-transparent border-b border-primary/20 backdrop-blur-xl"
+        id="navbar">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max-width mx-auto">
+            <div class="font-headline-sm text-headline-sm text-primary flex justify-center items-center gap-1">
+                <img src="../assets/magniousevent/magnious-logo.png" class="h-20 w-30"  alt="">Magnious Events</div>
+            <div class="hidden md:flex gap-gutter items-center font-label-caps text-label-caps">
+                <a class="text-primary border-b border-secondary pb-1" href="#">Portfolio</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Services</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Philosophy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Gallery</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Team</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Contact</a>
+            </div>
+            <button
+                class="hidden md:inline-block px-6 py-3 font-label-caps text-label-caps uppercase bg-primary-container text-gold gold-border hover-gold transition-colors duration-300 scale-95 hover:scale-100 transition-transform">
+                Inquire Now
+            </button>
+            <!-- Mobile hamburger -->
+            <button id="menu-toggle" class="md:hidden text-primary" aria-label="Open menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="md:hidden bg-primary-container border-t border-primary/20 px-margin-mobile">
+            <div class="flex flex-col gap-6 py-6 font-label-caps text-label-caps">
+                <a class="text-primary" href="#">Portfolio</a>
+                <a class="text-on-surface-variant" href="#">Services</a>
+                <a class="text-on-surface-variant" href="#">Philosophy</a>
+                <a class="text-on-surface-variant" href="#">Gallery</a>
+                <a class="text-on-surface-variant" href="#">Team</a>
+                <a class="text-on-surface-variant" href="#">Contact</a>
+                <button
+                    class="w-full px-6 py-3 font-label-caps text-label-caps uppercase bg-transparent text-gold gold-border hover-gold transition-colors duration-300">
+                    Inquire Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO -->
+    <section
+        class="relative min-h-screen flex items-center justify-center bg-primary-container pt-32 px-margin-mobile md:px-margin-desktop text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-8 fade-up">
+            <img src="../assets/magniousevent/magnious-logo.png" class="h-20 w-30"  alt="">
+            <p
+                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary italic font-light">
+                Life is made of special moments. Turn each into magic with Magnious Events.
+            </p>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <span class="material-symbols-outlined text-primary text-3xl">expand_more</span>
+        </div>
+    </section>
+
+    <!-- 3. PULL QUOTE -->
+    <section
+        class="bg-cream text-primary-container py-section-padding px-margin-mobile md:px-margin-desktop text-center">
+        <div class="max-w-3xl mx-auto fade-up">
+            <span class="material-symbols-outlined text-gold text-6xl mb-6 opacity-50"
+                style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            <h2 class="font-headline-md text-headline-md italic">
+                We craft royal legacies that live on in memory.
+            </h2>
+        </div>
+    </section>
+
+    <!-- 4. OUR EXPERTISE -->
+    <section class="bg-primary-container py-section-padding px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max-width mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <div class="group flex flex-col items-center text-center fade-up gap-6">
+                    <div
+                        class="w-64 h-64 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#D4AF37] transition-all duration-500 p-2">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img alt="Hospitality Management"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AEtjO1VOpHBpOWI8wOxrNgI1_B4ZHx2DZNbUmtnc6zrhdVfiq55X0LgZOmMDUulKTXbV9ZVT-j0sjOJlzapxKx-E5YDasLr1RWFJsE1qk9tlovroJawh8P8nA8Cb7mdbbR6r6hTcnHTwZmQSvKIurVa3HQuJOv-um7nZIA-tBMLESoBa1wgYPSoPET6eOuzUl899BBz447QqiP_1GEbznjh2UktFlory9foOqZZEXuciY_i9nhYUIje_xvyo7Qk" />
+                        </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Hospitality Management</h3>
+                    <p class="text-sm text-on-surface-variant -mt-4">Impeccable service tailored for discerning guests.
+                    </p>
+                </div>
+                <div class="group flex flex-col items-center text-center fade-up gap-6 delay-100">
+                    <div
+                        class="w-64 h-64 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#D4AF37] transition-all duration-500 p-2">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img alt="Logistics Management"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AEtjO1XkhQcAXuBUn1ZDrXgkzFX5QGA4pQRJ4zDhCvLB9lMUp3A42-aB3trgkMAUm6qou7s_xxO4EIKvreNiPt7w8NzkHYkmLNhjhwasU28_UQBZ_I7AKUdY4kF7qnBm4PNOgSHkC2vW0j8Y6LnFMMcUiLjE5jG10FDFdPEo7nAiery6ZsEusmLGV1wkT6DPvpW7DTtORNr02ne7v7gKrcThaErtQUofgItK47GKT9wGE2Hmd-R8HT3FKffBA64" />
+                        </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Logistics Management</h3>
+                    <p class="text-sm text-on-surface-variant -mt-4">Seamless coordination of premium transport.</p>
+                </div>
+                <div class="group flex flex-col items-center text-center fade-up gap-6 delay-200">
+                    <div
+                        class="w-64 h-64 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#D4AF37] transition-all duration-500 p-2">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img alt="Gifting Excellence"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AEtjO1XnnvzYjMFqKu71VaENQyVnIR-RgDv6Cyr7yLlB-b1WhzjrkYCBKvLlhHs2ccIEPPPBOgfRnl42KB3YXqVEsBLacyg0imD66p3r00L7WMdAbIhKnYBgADgtB6Lo7EW7m5ZmjhrUXyfBr9rabBQD1Mzu4ZkkvPlnQ1xoH5Bh0XmyzKxpfO4B1FOgThzsInvMJs2L3lnZ7qpgoGXj8mj5CZ61233dR656yylnCMaUn5NckHCjXMhejM2hnw" />
+                        </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Gifting Excellence</h3>
+                    <p class="text-sm text-on-surface-variant -mt-4">Curated, bespoke gifts with gold foil elegance.</p>
+                </div>
+                <div class="group flex flex-col items-center text-center fade-up gap-6 delay-300">
+                    <div
+                        class="w-64 h-64 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#D4AF37] transition-all duration-500 p-2">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJK-bRIvxXgQgTR1l5Jipt8fDJV-9jid8x2viQOIENAFkgp1aALjuJ02cyfZoLLNa2-8DnCC9b-IGVZ53lU9sY816Wf0GTY14LEuhc1jWsM7E5mQtdmXTtvIiBkCOiDIfRSns0WF61ZVSJkhqtGiVdxIdaZQfdjcSfTswt1ZIk9mkiYtv7IPyY52_X8NlxvEffOJnYfQ2vGkTEta6EW8LeUexZhFNOgbmwkH0CWu1ef0WVm5iakVyz')">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Corporate Events</h3>
+                    <p class="text-sm text-on-surface-variant -mt-4">Elevating global summits and gala dinners.</p>
+                </div>
+                <div class="group flex flex-col items-center text-center fade-up gap-6 delay-400">
+                    <div
+                        class="w-64 h-64 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#D4AF37] transition-all duration-500 p-2">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img alt="Artist Booking"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AEtjO1U0joCrErlaSfZ7J2k8AwC7k8-YawMni3i0KqUVIMdOS80n9kZ89rcuvYzky7oqWvfIN0JkWsEjrTs6t0pqKDyimTwvH2vKJxdZc2Oi7nyVrfsc7bx2q0GWFhVC_A8JL1_Q_jN-ZL5BIpj3KDlQiD70_MTUfFDUfwN9mAT_zFDw1z5EaYEdB0i2WLBme_fRBWYcd_1oCSOvo2B24e8vJy3420ryiNHTuzKNhC8Up1rSusYYWlHJXvQ939w" />
+                        </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Artist Booking</h3>
+                    <p class="text-sm text-on-surface-variant -mt-4">World-class performances for exclusive gatherings.
+                    </p>
+                </div>
+                <div class="group flex flex-col items-center text-center fade-up gap-6 delay-500">
+                    <div
+                        class="w-64 h-64 rounded-full overflow-hidden border-2 border-transparent group-hover:border-[#D4AF37] transition-all duration-500 p-2">
+                        <div class="w-full h-full rounded-full overflow-hidden">
+                            <img alt="Printing and Collateral"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AEtjO1UWa8RtbJTySLMaVTzOLZ8sGVP2Wo4SQH-1To4hSEAMUxMw3GIRwB031a7fK46MpziG_HkmGrVnf4kOShfTDqIJ_sLL6LcZXzr_Ldsysuk2qDuqI8j1lXqQtmZ-ZFR1t2vo_WsT5GXWga0gU1EMOLDNzWWgt9Z_1x0H47c3xSSQM4Gys1Tf4y-q2YIbJADR0AQ63N9MPVBOcZkFlU244yXK43KqBmEk9YS_TEkcrp1CoxjQxkCTTT1BYCg" />
+                        </div>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Printing &amp; Collateral</h3>
+                    <p class="text-sm text-on-surface-variant -mt-4">Luxurious embossed stationery and event branding.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ABOUT PREVIEW -->
+    <section
+        class="bg-cream text-primary-container py-section-padding px-margin-mobile md:px-margin-desktop border-b border-primary-container/10">
+        <div class="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div class="fade-up">
+                <h2 class="font-headline-md text-headline-md text-primary-container mb-6">Mastering the Art of
+                    Celebration</h2>
+                <p class="font-body-lg text-body-lg text-primary-container/80 mb-8">
+                    Magnious Events specializes in conceptualizing, designing, and executing bespoke celebrations that
+                    transcend expectations. With an unwavering commitment to perfection and an eye for unparalleled
+                    luxury, we transform fleeting moments into enduring legacies of grandeur and elegance.
+                </p>
+                <button
+                    class="inline-block px-8 py-4 font-label-caps text-label-caps uppercase bg-primary-container text-gold hover:bg-gold hover:text-primary-container transition-colors duration-300">
+                    Read More
+                </button>
+            </div>
+            <div class="h-[500px] w-full rounded-lg overflow-hidden fade-up delay-100">
+                <img alt="About Magnious Events"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1W7W1lxiHTEv_erEme-3TIbHcPDPJU2lSJug1tTjn7GY_bgb7cgFWa8fXcjsCxreMmG7t6vrkzUwFOEOzKdOLLyip6T2XyHk_0PaX8Wa-nzxr4gTTqxE5NSD1L6Q0FM7AIpSZwHKVf3kMgs3XjpLyGaSMoKhmx2MHNDa0rikGeRt8J-HJkQs535cGM-tS0taJmIwkWfM1LHCkR3G2hXk_Q5IcGzsXWkEqSkFuBrbXWlmMU7oqgQRChbMA" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TEAM PHOTO BANNER -->
+    <section class="relative w-full h-[60vh] md:h-[80vh] flex items-end justify-center pb-12 fade-up">
+        <div class="absolute inset-0 z-0">
+            <img alt="The Team" class="w-full h-full object-cover"
+                src="../assets/magniousevent/hospi-background.webp" />
+            <div class="absolute inset-0 bg-primary-container/40"></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="font-headline-md text-headline-md text-cream shadow-sm">Expertise In Hospitality Management</h2>
+        </div>
+    </section>
+
+    <!-- 7. PHILOSOPHY / FEATURE SPLIT -->
+    <section class="bg-primary-container py-section-padding px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max-width mx-auto flex flex-col gap-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                <div class="h-[600px] rounded-lg overflow-hidden fade-up order-2 md:order-1">
+                    <img alt="Our Philosophy"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1Xy8oEUghaH0SCa_D2rwju91iPLCGKu-QTQdwtZW-EF7JpYeT6EwQF3Gw3WVR9_a_spYuINSk5IdbaBGAGPxb-rwJnRFNxjAHI2LB4lWW7j1TNV4bePSA__fF3qpeQ0dM6zEdOE5VtjrSVutcjsQFEdSeESTDiI0eBqcrI72mAhSftMq7_-ZlT0Cdn4ZhIbLHgeEaS23cMdZ_xcZzspn48OzygeIF9tVB8RhubOHDbUQYG2GHEyOZquxQ" />
+                </div>
+                <div class="fade-up order-1 md:order-2 md:pl-12">
+                    <h3 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-4">Our Philosophy
+                    </h3>
+                    <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Designing with Purpose and Passion
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Every event is a unique narrative waiting to be told. We approach each project with a fresh
+                        perspective, blending innovative design with meticulous logistical planning. Our philosophy
+                        centers on creating immersive environments where every detail harmonizes to evoke emotion and
+                        inspire awe.
+                    </p>
+                    <button
+                        class="inline-block px-8 py-3 rounded-full font-label-caps text-label-caps uppercase bg-transparent text-gold gold-border hover-gold transition-colors duration-300">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. WHY MAGNIOUS EVENTS -->
+    <section
+        class="bg-cream text-primary-container py-section-padding px-margin-mobile md:px-margin-desktop text-center">
+        <div class="max-w-container-max-width mx-auto">
+            <h2 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-16 fade-up">Why Magnious
+                Events</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-up flex flex-col items-center">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4">diamond</span>
+                    <h3 class="font-headline-sm text-xl text-primary-container mb-2">Professionalism</h3>
+                    <p class="font-body-md text-primary-container/80 text-sm">Unwavering standards in every interaction
+                        and execution.</p>
+                </div>
+                <div class="fade-up delay-100 flex flex-col items-center">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4">search</span>
+                    <h3 class="font-headline-sm text-xl text-primary-container mb-2">Attention to Detailing</h3>
+                    <p class="font-body-md text-primary-container/80 text-sm">Meticulous planning where no element is
+                        overlooked.</p>
+                </div>
+                <div class="fade-up delay-200 flex flex-col items-center">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4">palette</span>
+                    <h3 class="font-headline-sm text-xl text-primary-container mb-2">Creativity</h3>
+                    <p class="font-body-md text-primary-container/80 text-sm">Innovative concepts tailored to your
+                        unique vision.</p>
+                </div>
+                <div class="fade-up delay-300 flex flex-col items-center">
+                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4">group</span>
+                    <h3 class="font-headline-sm text-xl text-primary-container mb-2">Experienced Team</h3>
+                    <p class="font-body-md text-primary-container/80 text-sm">Seasoned experts dedicated to flawless
+                        delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. GALLERY -->
+    <section class="bg-primary-container py-section-padding px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max-width mx-auto text-center">
+            <h2 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-12 fade-up">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                <div class="h-64 rounded overflow-hidden fade-up"><img alt="Gallery"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1W7W1lxiHTEv_erEme-3TIbHcPDPJU2lSJug1tTjn7GY_bgb7cgFWa8fXcjsCxreMmG7t6vrkzUwFOEOzKdOLLyip6T2XyHk_0PaX8Wa-nzxr4gTTqxE5NSD1L6Q0FM7AIpSZwHKVf3kMgs3XjpLyGaSMoKhmx2MHNDa0rikGeRt8J-HJkQs535cGM-tS0taJmIwkWfM1LHCkR3G2hXk_Q5IcGzsXWkEqSkFuBrbXWlmMU7oqgQRChbMA" />
+                </div>
+                <div class="h-64 rounded overflow-hidden fade-up delay-100"><img alt="Gallery"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1VOpHBpOWI8wOxrNgI1_B4ZHx2DZNbUmtnc6zrhdVfiq55X0LgZOmMDUulKTXbV9ZVT-j0sjOJlzapxKx-E5YDasLr1RWFJsE1qk9tlovroJawh8P8nA8Cb7mdbbR6r6hTcnHTwZmQSvKIurVa3HQuJOv-um7nZIA-tBMLESoBa1wgYPSoPET6eOuzUl899BBz447QqiP_1GEbznjh2UktFlory9foOqZZEXuciY_i9nhYUIje_xvyo7Qk" />
+                </div>
+                <div class="h-64 rounded overflow-hidden fade-up delay-200"><img alt="Gallery"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1U0joCrErlaSfZ7J2k8AwC7k8-YawMni3i0KqUVIMdOS80n9kZ89rcuvYzky7oqWvfIN0JkWsEjrTs6t0pqKDyimTwvH2vKJxdZc2Oi7nyVrfsc7bx2q0GWFhVC_A8JL1_Q_jN-ZL5BIpj3KDlQiD70_MTUfFDUfwN9mAT_zFDw1z5EaYEdB0i2WLBme_fRBWYcd_1oCSOvo2B24e8vJy3420ryiNHTuzKNhC8Up1rSusYYWlHJXvQ939w" />
+                </div>
+                <div class="h-64 rounded overflow-hidden fade-up"><img alt="Gallery"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1Xy8oEUghaH0SCa_D2rwju91iPLCGKu-QTQdwtZW-EF7JpYeT6EwQF3Gw3WVR9_a_spYuINSk5IdbaBGAGPxb-rwJnRFNxjAHI2LB4lWW7j1TNV4bePSA__fF3qpeQ0dM6zEdOE5VtjrSVutcjsQFEdSeESTDiI0eBqcrI72mAhSftMq7_-ZlT0Cdn4ZhIbLHgeEaS23cMdZ_xcZzspn48OzygeIF9tVB8RhubOHDbUQYG2GHEyOZquxQ" />
+                </div>
+                <div class="h-64 rounded overflow-hidden fade-up delay-100"><img alt="Gallery"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1XkhQcAXuBUn1ZDrXgkzFX5QGA4pQRJ4zDhCvLB9lMUp3A42-aB3trgkMAUm6qou7s_xxO4EIKvreNiPt7w8NzkHYkmLNhjhwasU28_UQBZ_I7AKUdY4kF7qnBm4PNOgSHkC2vW0j8Y6LnFMMcUiLjE5jG10FDFdPEo7nAiery6ZsEusmLGV1wkT6DPvpW7DTtORNr02ne7v7gKrcThaErtQUofgItK47GKT9wGE2Hmd-R8HT3FKffBA64" />
+                </div>
+                <div class="h-64 rounded overflow-hidden fade-up delay-200"><img alt="Gallery"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1XnnvzYjMFqKu71VaENQyVnIR-RgDv6Cyr7yLlB-b1WhzjrkYCBKvLlhHs2ccIEPPPBOgfRnl42KB3YXqVEsBLacyg0imD66p3r00L7WMdAbIhKnYBgADgtB6Lo7EW7m5ZmjhrUXyfBr9rabBQD1Mzu4ZkkvPlnQ1xoH5Bh0XmyzKxpfO4B1FOgThzsInvMJs2L3lnZ7qpgoGXj8mj5CZ61233dR656yylnCMaUn5NckHCjXMhejM2hnw" />
+                </div>
+            </div>
+            <button
+                class="inline-block px-8 py-3 font-label-caps text-label-caps uppercase bg-transparent text-gold gold-border hover-gold transition-colors duration-300 fade-up">
+                View More
+            </button>
+        </div>
+    </section>
+
+    <!-- 10. FACES BEHIND THE COMPANY -->
+    <section
+        class="bg-cream text-primary-container py-section-padding px-margin-mobile md:px-margin-desktop border-t border-primary-container/10">
+        <div class="max-w-container-max-width mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-headline-md text-headline-md mb-4">Faces Behind the Company</h2>
+                <p class="font-body-md text-primary-container/80 max-w-2xl mx-auto">Meet the visionaries who orchestrate
+                    every Magnious masterpiece.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="fade-up group">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full bg-primary-container/10 mb-6 flex items-center justify-center border-2 border-transparent group-hover:border-gold transition-all duration-500">
+                        <img src="../assets/magniousevent/founder-1.webp" alt="" srcset="">
+                    </div>
+                    <h3 class="font-headline-sm text-xl text-primary-container font-semibold">Sahil Agarwal</h3>
+                    <p class="text-sm text-gold mt-1 mb-3 uppercase tracking-widest">Founder</p>
+                    <p class="text-sm text-primary-container/70 max-w-xs mx-auto">Brings hospitality expertise and a
+                        hands-on approach to every client experience.</p>
+                </div>
+                <div class="fade-up delay-100 group">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full bg-primary-container/10 mb-6 flex items-center justify-center border-2 border-transparent group-hover:border-gold transition-all duration-500">
+                        <img src="../assets/magniousevent/founder-2.webp" alt="" srcset="">
+                    </div>
+                    <h3 class="font-headline-sm text-xl text-primary-container font-semibold">Sahil Vijay</h3>
+                    <p class="text-sm text-gold mt-1 mb-3 uppercase tracking-widest">Founder</p>
+                    <p class="text-sm text-primary-container/70 max-w-xs mx-auto">Drives event planning and logistics
+                        with precision and a passion for detail.</p>
+                </div>
+                <div class="fade-up delay-200 group">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full bg-primary-container/10 mb-6 flex items-center justify-center border-2 border-transparent group-hover:border-gold transition-all duration-500">
+                        <img src="../assets/magniousevent/cofounder.webp" alt="" srcset="">
+                    </div>
+                    <h3 class="font-headline-sm text-xl text-primary-container font-semibold">Pallvi Ujlain</h3>
+                    <p class="text-sm text-gold mt-1 mb-3 uppercase tracking-widest">Co-Founder</p>
+                    <p class="text-sm text-primary-container/70 max-w-xs mx-auto">Committed to delivering personalized
+                        service and creating unforgettable guest experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 11. FOOTER -->
+    <section class="bg-cream text-primary-container py-section-padding px-margin-mobile md:px-margin-desktop"
+        id="contact">
+        <div class="max-w-container-max-width mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-4">Get In Touch</h2>
+                <h3 class="font-headline-md text-headline-md">Let's Create Your Legacy</h3>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                <!-- Left Column: Contact Info -->
+                <div class="flex flex-col gap-8 fade-up">
+                    <div
+                        class="flex items-start gap-6 p-6 border border-primary-container/10 rounded-lg hover:border-secondary transition-colors duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full gold-border text-gold">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-caps text-label-caps uppercase mb-1">Call Us</h4>
+                            <p class="font-headline-sm text-xl">+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-6 p-6 border border-primary-container/10 rounded-lg hover:border-secondary transition-colors duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full gold-border text-gold">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-caps text-label-caps uppercase mb-1">Email Us</h4>
+                            <p class="font-headline-sm text-xl">hello@magnious.com</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-6 p-6 border border-primary-container/10 rounded-lg hover:border-secondary transition-colors duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full gold-border text-gold">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-caps text-label-caps uppercase mb-1">Visit Us</h4>
+                            <p class="font-headline-sm text-xl">Jaipur, Rajasthan, India</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Contact Form -->
+                <div class="fade-up delay-200">
+                    <form class="flex flex-col gap-6">
+                        <div class="relative">
+                            <input
+                                class="peer w-full bg-transparent border-b border-primary-container/20 py-3 focus:outline-none focus:border-secondary transition-colors placeholder-transparent"
+                                id="name" placeholder=" " type="text" />
+                            <label
+                                class="absolute left-2 top-3 font-label-caps text-label-caps uppercase text-primary-container/50 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-secondary"
+                                for="name">Full Name</label>
+                        </div>
+                        <div class="relative">
+                            <input
+                                class="peer w-full bg-transparent border-b border-primary-container/20 py-3 focus:outline-none focus:border-secondary transition-colors placeholder-transparent"
+                                id="email" placeholder=" " type="email" />
+                            <label
+                                class="absolute left-2 top-3 font-label-caps text-label-caps uppercase text-primary-container/50 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-secondary"
+                                for="email">Email Address</label>
+                        </div>
+                        <div class="relative">
+                            <textarea
+                                class="peer w-full bg-transparent border-b border-primary-container/20 py-3 focus:outline-none focus:border-secondary transition-colors placeholder-transparent resize-none"
+                                id="message" placeholder=" " rows="4"></textarea>
+                            <label
+                                class="absolute left-2 top-3 font-label-caps text-label-caps uppercase text-primary-container/50 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-secondary"
+                                for="message">Your Message</label>
+                        </div>
+                        <button
+                            class="mt-4 px-8 py-4 font-label-caps text-label-caps uppercase bg-transparent text-gold gold-border hover:bg-gold hover:text-primary-container transition-all duration-300"
+                            type="submit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 11. FOOTER -->
+    <footer
+        class="bg-primary-container py-section-padding px-margin-mobile md:px-margin-desktop w-full border-t border-outline-variant">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full max-w-container-max-width mx-auto fade-up">
+            <div class="flex flex-col gap-6">
+                <div class="font-headline-md text-headline-md text-primary">Magnious Events</div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Crafting Royal Legacies in Jaipur.
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-auto">
+                    © 2026 Magnious Events.
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-2">Services</h4>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Private Estates</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Royal Weddings</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Corporate Galas</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Concierge</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-caps text-label-caps text-gold uppercase tracking-[0.2em] mb-2">Information</h4>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Legal</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Contact Us</a>
+            </div>
+            <div class="flex flex-col gap-6">
+                <div class="w-full h-32 bg-cover bg-center rounded-sm border border-outline-variant"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWfxQHd5f9BEua6LMT38KckWrojtVFtEnyN4loucm0w2rTWKHiTTYHm9E4Uehp8fN5D2TfmfegwbrLdDrJtN4bbT1C0zlydslG3GW8TbL5ui9XURA33K_KwipvylKfnugTlgULhNDXnUq201h0QrM7Q3P6CP0NwESt6fA9vd_LLem0w5LMA5mDRwtZKruNfxjeKJhlkX31b_uKSEu2mXqYKbauTqUEap43QrN3aERHwjU2KnP6tJOq')">
+                </div>
+                <div class="flex gap-4">
+                    <a class="text-on-surface-variant hover:text-gold transition-colors" href="#"><span
+                            class="material-symbols-outlined">share</span></a>
+                    <a class="text-on-surface-variant hover:text-gold transition-colors" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation observer
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'border-b', 'border-primary/20');
+                navbar.classList.add('bg-primary-container', 'shadow-lg');
+            } else {
+                navbar.classList.add('bg-transparent', 'border-b', 'border-primary/20');
+                navbar.classList.remove('bg-primary-container', 'shadow-lg');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const icon = menuToggle.querySelector('span');
+            icon.textContent = mobileMenu.classList.contains('open') ? 'close' : 'menu';
+        });
+    </script>
+</body>
+
+</html>
