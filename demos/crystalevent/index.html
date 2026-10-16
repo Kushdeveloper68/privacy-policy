@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#87006a", "secondary-fixed": "#efdbff", "on-error-container": "#ffdad6", "primary-fixed": "#eddcff", "inverse-on-surface": "#333028", "primary": "#d3beeb", "on-background": "#e8e2d6", "surface-container-low": "#1e1b14", "inverse-surface": "#e8e2d6", "secondary-container": "#5e328e", "surface-container": "#221f18", "error": "#ffb4ab", "inverse-primary": "#68577e", "on-tertiary": "#60004a", "secondary-fixed-dim": "#dbb8ff", "on-surface": "#e8e2d6", "surface": "#15130c", "primary-container": "#1a0b2e", "on-primary-fixed": "#231437", "on-surface-variant": "#cbc4ce", "on-primary-container": "#88769f", "tertiary-fixed-dim": "#ffaede", "on-secondary-fixed": "#2b0052", "primary-fixed-dim": "#d3beeb", "surface-variant": "#38352d", "surface-tint": "#d3beeb", "surface-container-lowest": "#100e08", "on-secondary": "#441473", "surface-dim": "#15130c", "tertiary": "#ffaede", "on-primary-fixed-variant": "#4f4065", "on-primary": "#38294d", "error-container": "#93000a", "on-error": "#690005", "outline-variant": "#4a454d", "background": "#15130c", "tertiary-fixed": "#ffd8ec", "surface-bright": "#3c3931", "secondary": "#dbb8ff", "tertiary-container": "#2c0021", "on-tertiary-container": "#d047a8", "surface-container-highest": "#38352d", "on-tertiary-fixed": "#3b002d", "on-secondary-container": "#d1a6ff", "surface-container-high": "#2d2a22", "on-secondary-fixed-variant": "#5c308b", "outline": "#958f98" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "3.5rem", "margin": "2rem", "space-md": "1.25rem", "gutter": "1.5rem", "margin-lg": "4rem", "gutter-lg": "2.5rem", "space-xs": "0.375rem", "margin-sm": "1rem", "space-sm": "0.75rem", "gutter-sm": "1rem", "space-lg": "2rem" }, "fontFamily": { "display-hero-mobile": ["Playfair Display"], "headline-xl": ["Bodoni Moda"], "annotation": ["Playfair Display"], "label-ui": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "headline-xl-mobile": ["Bodoni Moda"], "label-caps": ["Bodoni Moda"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"] }, "fontSize": { "display-hero-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "annotation": ["17px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400" }], "label-ui": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-hero": ["72px", { "lineHeight": "78px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "label-caps": ["13px", { "lineHeight": "18px", "letterSpacing": "0.18em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }] } } } };</script>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-tertiary-container selection:text-tertiary">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-primary-container/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-20 w-full px-gutter md:px-margin lg:px-margin-lg flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm"><img alt="Crystal Event Management Logo"
+                    class="h-8 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1V7cPXNFg71nd_npjbsDf9mxhk1ljwKVQrKNz4OYS-F2HKkSskJJGoYQYCndd1Ix6f8hSiUF3hUT_U1S1KMevCFIb6TuergXiIPmNK1-6Z_gfYmAj9PNu5EIUcIJ_aWbzuR96-MYb07tnl6IHwpbyTKxkVpgpowOa0SDD6cU76VPu5qzJOBnaDko6S-HHTrC2W8qMVnvTiULvpBN17O0lMgB0aZ5_cvzE1MfLYGVKpipqU7RGLc4cNqvCbv" />
+                <div class="hidden sm:flex flex-col"><span
+                        class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Crystal
+                        Events</span><span class="font-annotation text-annotation italic text-primary/70 -mt-1">we shine
+                        up your dream</span></div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-space-lg"
+                data-active-classes="bg-secondary-container text-on-secondary-container font-label-ui text-label-ui rounded-full px-space-sm py-space-xs">
+                <a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="weddings" href="#">Weddings</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="corporate" href="#">Corporate</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="celebrity-booking" href="#">Celebrity Booking</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="gallery" href="#">Gallery</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="awards" href="#">Awards</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="about" href="#">About</a></nav>
+            <div class="flex items-center gap-space-sm"><a
+                    class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container shadow-[0_0_20px_rgba(208,71,168,0.25)] transition-all font-label-ui text-label-ui"
+                    data-path="plan-my-event" href="#"><span class="font-label-ui text-label-ui font-semibold">Plan My
+                        Event</span><span class="material-symbols-outlined text-primary text-[18px]">east</span></a>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-background">
+        <div class="flex flex-col w-full overflow-hidden text-on-surface">
+            <!-- 1. HERO SECTION (Dark Ink Plum #1A0B2E, full viewport feel) -->
+            <section
+                class="relative w-full bg-primary-container px-gutter md:px-margin lg:px-margin-lg pt-12 pb-space-xl overflow-hidden">
+                <!-- Theatrical Spotlight Glow & Velvet Grain Simulation -->
+                <div
+                    class="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-secondary-container/30 blur-[130px]">
+                </div>
+                <div
+                    class="pointer-events-none absolute top-1/4 right-0 w-[550px] h-[550px] rounded-full bg-tertiary-container/40 blur-[140px]">
+                </div>
+                <div
+                    class="pointer-events-none absolute bottom-0 left-1/3 w-[450px] h-[300px] rounded-full bg-secondary/10 blur-[100px]">
+                </div>
+                <!-- Architectural Background Playbill Grid -->
+                <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                    <!-- Left Column: Typographic Drama -->
+                    <div class="lg:col-span-7 flex flex-col gap-space-md">
+                        <!-- Playbill Vignette Header Badge -->
+                        <div
+                            class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-surface-container-high/80 text-primary border border-primary/20 shadow-sm backdrop-blur-md">
+                            <span class="text-tertiary text-xs">✦</span>
+                            <span
+                                class="font-label-caps text-[11px] tracking-[0.2em] uppercase text-primary font-bold">The
+                                Luxury Indian Gala &amp; Production House</span>
+                            <span class="text-tertiary text-xs">✦</span>
+                        </div>
+                        <h1
+                            class="font-display-hero text-5xl sm:text-6xl lg:text-[84px] lg:leading-[90px] font-bold tracking-tight text-on-surface">
+                            We shine up <br />
+                            your
+                            <span class="relative inline-block italic font-headline-xl text-tertiary">
+                                dream.
+                                <svg class="absolute -bottom-2 left-0 w-full overflow-visible" fill="none" height="14"
+                                    viewbox="0 0 200 14">
+                                    <path d="M2 10 Q 90 2 196 9" stroke="#d3beeb" stroke-linecap="round"
+                                        stroke-width="3"></path>
+                                </svg>
+                            </span>
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Weddings, corporate nights, and celebrity-led events—curated with breathless theatrical
+                            grandeur and couture precision by Crystal for over 8 stellar years.
+                        </p>
+                        <!-- CTA Action Cluster -->
+                        <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                            <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container shadow-[0_0_30px_rgba(208,71,168,0.35)] transition-all font-label-ui text-label-ui font-semibold group"
+                                href="#enquiry-section">
+                                <span>Plan My Event</span>
+                                <span
+                                    class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">auto_awesome</span>
+                            </a>
+                            <button
+                                class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container/60 hover:bg-surface-container-high text-on-surface border border-outline-variant/40 transition-colors font-label-ui text-label-ui backdrop-blur-md"
+                                type="button">
+                                <span
+                                    class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </span>
+                                <span>Watch our showreel (2:14 min)</span>
+                            </button>
+                        </div>
+                        <!-- Handwritten Annotation Callout -->
+                        <div class="flex items-center gap-space-xs text-primary/80 pt-space-xs">
+                            <span class="font-annotation text-annotation italic text-secondary">"Your big day, our
+                                grandest stage."</span>
+                            <span
+                                class="material-symbols-outlined text-primary text-[20px] rotate-12">stylus_note</span>
+                        </div>
+                    </div>
+                    <!-- Right Column: Asymmetric Artistic Collage -->
+                    <div class="lg:col-span-5 relative min-h-[460px] flex items-center justify-center">
+                        <!-- Ambient Radial Bloom Behind Primary Frame -->
+                        <div class="absolute w-72 h-72 rounded-full bg-tertiary-container/60 blur-[80px]"></div>
+                        <!-- Collage Image 1: Main Mandap Arch (Tilted -2deg) -->
+                        <div
+                            class="relative z-20 w-64 sm:w-72 md:w-80 rounded-t-[140px] rounded-b-xl overflow-hidden shadow-[0_20px_50px_rgba(10,3,20,0.8)] -rotate-2 transform hover:rotate-0 transition-transform duration-500 bg-surface-container-high p-1.5">
+                            <div class="w-full h-80 sm:h-96 rounded-t-[136px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Opulent Indian wedding mandap adorned with cascading coral marigolds, soft blush orchids, and amber chandeliers in a heritage palace courtyard at twilight, cinematic golden hour lighting, 8k resolution, editorial fashion photography"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZKsFZyQKv7eVqnvONvGxHxkGXZPO1aPrVnNkEdF_5egHhPxCtdHGRn7nhpx5ygsPCygzonS-knrzzIYLm1uQFgUal__rnL7Zxo7m0QcNpqznIsHRY8QmRx7IY9MopAGePbB_cFQEzcgklDTPVPlUILG80IwOeFhXdK0MBvVDsrE3wV6X9RwBSetKwT4vXt0_Bm6E3629kHCemNfqk2a5cs83N95rv5N4t0k1-rY-72f460Kp03sGKIA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-3 left-4 right-4 text-xs font-label-caps uppercase tracking-wider text-primary-fixed">
+                                    Udaipur Royal Sangeet</div>
+                            </div>
+                        </div>
+                        <!-- Collage Image 2: Corporate Gala Lights (Shifted Right) -->
+                        <div
+                            class="absolute -right-4 -bottom-4 z-30 w-44 sm:w-52 rounded-xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.6)] rotate-3 bg-surface-container p-1 hover:rotate-1 transition-transform">
+                            <div class="w-full h-36 rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="High-tech corporate gala auditorium filled with applause under violet stage lasers, dramatic beam lights, illuminated LED proscenium arches, and silhouetted VIP audience, wide cinematic aspect"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlWGNBva7mbTBVIHfaHO-BO0i4J5KQjiJQemOCzjxUVG36QrhBH1HPj8C95TFpAKGVqgSEF5t9ZE8NtVHaCU75xIl0WOQa2fdPlYU7rRKadyLEFj5tfhG9mge-7TU2szNOKQI8TW7UTcpNhxoPetnVBTKF-766bY7Vt6v7yFsoTF2a2FX8P39WcBXvVQ_Hi4SFUfV6sGPvFszjuKyfkIaPobkd4durhCW2PuTj8jBN0Wc7Nk7ACYPHiQ" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute bottom-2 left-2 text-[10px] font-label-ui font-semibold text-secondary-fixed">Tech
+                                    Gala 2024</span>
+                            </div>
+                        </div>
+                        <!-- Collage Image 3: Celebrity Backstage Micro Card (Top Left) -->
+                        <div
+                            class="absolute -top-4 -left-4 z-30 w-36 sm:w-44 rounded-xl overflow-hidden shadow-2xl -rotate-6 bg-surface-container-highest p-1">
+                            <div class="w-full h-32 rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Bollywood celebrity artist singing live into a vintage chrome microphone surrounded by stage fog, dramatic magenta backlighting, confetti shower, energetic concert ambiance"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuALToWKdnUaepXE72Tl_-b8YKC0fcaMJc8Nwxvf9Jfdsk6MOyhsbR2kUTCaXlHB6ng23Va1BScb3_WpKXD7TcQ-OaFGKNYO7UWkOYm6cXzBeu89hOYjJy4ry-NDlIoJdiGZJephsAcv--qTLdqGyu3G4qbrD8sY9bDAewMXnqF_mNG5FZm7m9L_hTSKa2SkzFgXIuQU9IE4RHrIsU5yKioCPlagKjxu7snhyydSa8TpS8srrU83AwkQsA" />
+                                <span
+                                    class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container/90 text-tertiary text-[9px] font-bold tracking-wider">LIVE
+                                    STAGE</span>
+                            </div>
+                        </div>
+                        <!-- Rotating Circular Award Seal Badge -->
+                        <div
+                            class="absolute -top-6 right-2 z-40 w-24 h-24 rounded-full bg-secondary-container text-on-secondary-container shadow-2xl flex items-center justify-center border border-primary/40 animate-[spin_24s_linear_infinite]">
+                            <svg class="w-full h-full p-1" viewbox="0 0 100 100">
+                                <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent"
+                                    id="circlePath"></path>
+                                <text class="text-[9px] font-label-caps uppercase tracking-widest fill-current">
+                                    <textpath href="#circlePath">✦ BEST EVENT COMPANY • 2023 • 2024 •</textpath>
+                                </text>
+                            </svg>
+                            <span class="absolute text-primary text-base">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Stat Strip: Playbill Metadata Bar -->
+                <div
+                    class="relative z-10 max-w-5xl mx-auto mt-space-xl pt-space-sm border-t border-primary/20 flex flex-wrap items-center justify-around gap-space-sm text-center">
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-primary font-bold">8+</span>
+                        <span class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Years
+                            of Craft</span>
+                    </div>
+                    <span class="text-tertiary">✦</span>
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-secondary font-bold">60+</span>
+                        <span
+                            class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Bollywood
+                            Roster</span>
+                    </div>
+                    <span class="text-tertiary">✦</span>
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-tertiary font-bold">2x</span>
+                        <span
+                            class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">National
+                            Awards</span>
+                    </div>
+                    <span class="text-tertiary">✦</span>
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-primary-fixed font-bold">500+</span>
+                        <span
+                            class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Curated
+                            Stages</span>
+                    </div>
+                </div>
+            </section>
+            <!-- 2. SERVICE MARQUEE TICKER (Orchid Magenta / Tertiary Container) -->
+            <section
+                class="w-full bg-tertiary-container text-tertiary py-3 overflow-hidden shadow-inner flex select-none">
+                <div
+                    class="flex whitespace-nowrap animate-[marquee_28s_linear_infinite] gap-6 text-sm font-label-caps uppercase tracking-[0.22em] font-semibold">
+                    <span>Weddings</span> <span class="text-primary-fixed">✦</span>
+                    <span>Corporate Summits</span> <span class="text-primary-fixed">✦</span>
+                    <span>Celebrity Bookings</span> <span class="text-primary-fixed">✦</span>
+                    <span>Red Carpet Awards</span> <span class="text-primary-fixed">✦</span>
+                    <span>Silver Jubilees</span> <span class="text-primary-fixed">✦</span>
+                    <span>Destination Goa</span> <span class="text-primary-fixed">✦</span>
+                    <span>Theatrical Scenography</span> <span class="text-primary-fixed">✦</span>
+                    <span>Gala Nights</span> <span class="text-primary-fixed">✦</span>
+                    <span>Brand Launches</span> <span class="text-primary-fixed">✦</span>
+                    <span>Royal Mandaps</span> <span class="text-primary-fixed">✦</span>
+                    <span>Weddings</span> <span class="text-primary-fixed">✦</span>
+                    <span>Corporate Summits</span> <span class="text-primary-fixed">✦</span>
+                    <span>Celebrity Bookings</span> <span class="text-primary-fixed">✦</span>
+                    <span>Red Carpet Awards</span> <span class="text-primary-fixed">✦</span>
+                </div>
+            </section>
+            <!-- 3. ABOUT / OUR STORY (Ivory Warm Editorial Broadsheet Canvas) -->
+            <section
+                class="w-full bg-[#F7F0E4] text-[#1A0B2E] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden">
+                <!-- Archival Paper Watermark Graphic -->
+                <div
+                    class="pointer-events-none absolute -top-10 right-10 text-[260px] font-bold font-headline-xl text-[#1A0B2E]/[0.03] select-none leading-none">
+                    01
+                </div>
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+                    <!-- Left (5/12): Elevated Stage Director Vignette -->
+                    <div class="lg:col-span-5 relative flex justify-center">
+                        <!-- Stamped Watermark '8+' -->
+                        <span
+                            class="absolute -top-12 -left-6 text-[180px] font-bold font-headline-xl text-[#1A0B2E]/[0.04] leading-none pointer-events-none select-none">8+</span>
+                        <div
+                            class="relative w-full max-w-sm rotate-[2.5deg] hover:rotate-0 transition-transform duration-500 bg-white p-3 shadow-[0_20px_45px_rgba(26,11,46,0.15)] rounded-sm">
+                            <div class="w-full h-[430px] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Chic charismatic Indian creative director standing backstage at a grand gala holding production schedules with glowing stage lighting and soft bokeh in the background, elegant black blazer, authentic documentary editorial aesthetic"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6H1SF0Z1Caa6g84PgTL5nLVZPb5OZfQxi40kIISpaYg6ziSlnbijj8ME-woPDWhteFIUEBRXrQzqbwrFxgkvOy-VcBqoP6bhe2Qg5YsknTXLJJ2cNGrael5DSnf5yr1EChHliGr9xpJ4WWadGcE4ucpMp8ECrdqdRHSi_lQR9H9OUsIEvzu4ipuFDc2TR-s6GzyasMV0SqsRhpimeLt81yCrEhRK4nkDqJjABhsKUatAAgoRsa3Eohg" />
+                            </div>
+                            <!-- Torn Paper Pin Caption -->
+                            <div class="mt-3 px-2 flex justify-between items-end border-t border-[#1A0B2E]/10 pt-2">
+                                <div>
+                                    <p class="font-headline-md text-lg text-[#1A0B2E] font-bold">Meera Singhania</p>
+                                    <p class="font-annotation text-xs text-[#1A0B2E]/70 italic">Founder &amp; Artistic
+                                        Lead</p>
+                                </div>
+                                <span
+                                    class="font-label-caps text-[10px] text-[#4B1D7A] tracking-widest uppercase font-semibold">Crystal
+                                    Atelier</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right (7/12): Editorial Narrative -->
+                    <div class="lg:col-span-7 flex flex-col gap-space-sm pl-0 lg:pl-space-md">
+                        <div class="inline-flex items-center gap-space-xs">
+                            <span class="w-6 h-[1.5px] bg-[#4B1D7A]"></span>
+                            <span
+                                class="font-label-caps text-xs text-[#4B1D7A] uppercase tracking-[0.2em] font-semibold">01
+                                — Our Story</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1A0B2E] leading-tight">
+                            Eight years of <em class="italic text-[#4B1D7A] font-headline-xl">making moments</em> look
+                            effortless.
+                        </h2>
+                        <p class="font-body-md text-[#1A0B2E]/80 leading-relaxed">
+                            What originated as an intimate design studio crafting bespoke coastal vows in Goa and
+                            high-society gatherings in South Mumbai has blossomed into one of India’s most trusted
+                            full-scale experiential production houses.
+                        </p>
+                        <p class="font-body-md text-[#1A0B2E]/80 leading-relaxed">
+                            We believe true luxury is invisible choreography. It lives in the acoustic calibration that
+                            ensures a grandmother hears every Sanskrit vow, the zero-latency VIP convoy that whisks
+                            A-listers straight onto the red carpet, and the architectural lighting that makes thirty
+                            thousand square feet feel like an intimate living room.
+                        </p>
+                        <!-- Pull-Quote with Orchid Magenta Accented Border -->
+                        <blockquote class="my-space-xs pl-space-md border-l-2 border-[#B02A8C] flex flex-col gap-1">
+                            <p class="font-annotation text-lg lg:text-xl italic text-[#1A0B2E] leading-snug">
+                                "When the house lights dim, the opening chord strikes, and three thousand people hold
+                                their breath as one—that precise suspended second is the only reason we exist."
+                            </p>
+                            <span class="font-annotation text-sm text-[#4B1D7A] italic">— From the Director's Desk,
+                                Production Diary 2024</span>
+                        </blockquote>
+                        <!-- Inline Editorial Number Bar -->
+                        <div class="grid grid-cols-3 gap-space-sm pt-space-xs border-t border-[#1A0B2E]/10">
+                            <div>
+                                <span class="font-headline-lg text-3xl font-bold text-[#4B1D7A]">8+</span>
+                                <p class="font-label-caps text-[11px] text-[#1A0B2E]/60 uppercase tracking-wider">Years
+                                    Active</p>
+                            </div>
+                            <div>
+                                <span class="font-headline-lg text-3xl font-bold text-[#4B1D7A]">500+</span>
+                                <p class="font-label-caps text-[11px] text-[#1A0B2E]/60 uppercase tracking-wider">
+                                    Curated Shows</p>
+                            </div>
+                            <div>
+                                <span class="font-headline-lg text-3xl font-bold text-[#4B1D7A]">60+</span>
+                                <p class="font-label-caps text-[11px] text-[#1A0B2E]/60 uppercase tracking-wider">
+                                    Bollywood Icons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 4. SERVICES (Ink Plum #1A0B2E, Interactive Playbill Roster - Not Generic Cards) -->
+            <section
+                class="w-full bg-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+                    <!-- Section Header -->
+                    <div
+                        class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-primary/20 pb-space-md">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-primary uppercase tracking-[0.25em] font-semibold">02
+                                — Playbill Repertoire</span>
+                            <h2
+                                class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-on-surface mt-1">
+                                Every celebration, <em class="italic text-tertiary font-headline-xl">one unified
+                                    crew.</em>
+                            </h2>
+                        </div>
+                        <p class="font-body-sm text-on-surface-variant max-w-sm">
+                            Comprehensive turnkey execution. From architectural drafting and municipal clearances to
+                            headline talent contracts.
+                        </p>
+                    </div>
+                    <!-- Playbill Stacked Interactive Rows -->
+                    <div class="flex flex-col divide-y divide-primary/15">
+                        <!-- Row 01 -->
+                        <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">01</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Royal &amp; Destination Weddings</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Heritage palace logistics,
+                                        bespoke mandap architecture, curated Sangeet choreography, and royal baraat
+                                        orchestration.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Palaces
+                                    • Coastlines</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Row 02 -->
+                        <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">02</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Corporate Summits &amp; Brand Galas</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">High-stakes leadership summits,
+                                        sensory product unveils, televised shareholder forums, and executive Goa
+                                        retreats.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Keynotes
+                                    • Launches</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Row 03 -->
+                        <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">03</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Celebrity &amp; A-List Artist Management</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Direct contracts for 60+
+                                        Bollywood icons, international playback artists, live bands, standup comics, and
+                                        celebrity emcees.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Green
+                                    Rooms • Security</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Row 04 -->
+                        <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">04</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Award Shows &amp; Televised Stage Arenas</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Kinetic truss design, 4K LED
+                                        volume backdrops, timecoded pyrotechnics, red carpet protocol, and live
+                                        broadcast routing.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Broadcast
+                                    • Pyro</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Row 05 -->
+                        <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">05</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Bespoke Decor &amp; Scenography</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Custom-sculpted installations,
+                                        Rajasthani royal heritage canopies, botanical glasshouse designs, and velvet
+                                        noir banquets.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Floral
+                                    • Fabric</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Row 06 -->
+                        <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">06</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Destination Goa Experiences</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Exclusive beach estate
+                                        takeovers, sunset cruise charters, Portuguese villa soirees, and beach-shack
+                                        acoustic evenings.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Goa
+                                    Studio • Beach</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 5. CELEBRITY BOOKING SPOTLIGHT (Royal Violet #4B1D7A with Bollywood Broadside Drama) -->
+            <section
+                class="w-full bg-secondary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden">
+                <div
+                    class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-container/60 via-secondary-container to-surface-container-lowest/80">
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                    <!-- Left Column: The Billboard Title -->
+                    <div class="lg:col-span-4 flex flex-col gap-space-sm">
+                        <div class="flex items-center gap-1 text-primary">
+                            <span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+                            <span
+                                class="font-label-caps text-xs uppercase tracking-widest text-secondary-fixed ml-2">Direct
+                                Artist Desk</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-none text-on-surface">
+                            60+ <em class="italic text-secondary font-headline-xl">Bollywood</em> faces.<br />
+                            One direct call.
+                        </h2>
+                        <p class="font-body-sm text-on-surface-variant">
+                            We maintain unmediated relationships with India’s leading talent agencies, artist managers,
+                            and screen icons. No middle brokers. Guaranteed riders, protocol-compliant close-protection,
+                            and seamless green-room logistics.
+                        </p>
+                        <!-- Availability Filter Badges -->
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Brand
+                                Ambassador Unveils</span>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Royal
+                                Sangeet Performances</span>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Award
+                                Ceremony Emcees</span>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Private
+                                VIP Concerts</span>
+                        </div>
+                        <div class="pt-space-xs">
+                            <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container hover:bg-primary-container text-tertiary hover:text-primary transition-all font-label-ui text-label-ui font-semibold shadow-lg"
+                                href="#enquiry-section">
+                                <span>Check Celebrity Availability</span>
+                                <span class="material-symbols-outlined text-[18px]">verified</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Center & Right: 3 Staggered Arched Artist Portrait Frames -->
+                    <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-space-md items-end">
+                        <!-- Artist Card 1 (Playback Singer) -->
+                        <div
+                            class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-2.5 rounded-t-[100px] rounded-b-xl border border-primary/20 backdrop-blur-md transform sm:translate-y-4 hover:-translate-y-1 transition-transform">
+                            <div class="w-full h-72 rounded-t-[90px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Famous Indian female playback singer singing passionately on a grand concert stage with golden backlighting, sparkling ethnic couture gown, stage smoke, expressive high glamour performance portrait"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvpe7lEOjFAi3gkQ5R8G-5O-14Yd1mIsHpR68rf6NmNL4XWxIMvQOIhuoAr-UVSAvG8hs5vi6nZdXNe-_3EmOENErQbIhUFOS2_2Slp7kxxldI9wcYieF_FPFMxQ8psBcd0ddvgGvHv12fWCDojo-SLYCzXr54Q_gKHsge6IAxNw5HhWNUaoKf9KksHeWtNg3bnXxvmBTRTbCu11Rhn_oGfRCbFW0rG6qvZ5R7aaBkrlPwTgp153Mdog" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-surface-container-high/90 text-[10px] font-label-caps uppercase tracking-wider text-secondary">Playback
+                                    Royalty</span>
+                            </div>
+                            <div class="px-2 pb-1 text-center">
+                                <h4 class="font-headline-md text-lg text-on-surface">Top Playback Star</h4>
+                                <p class="font-annotation text-xs text-primary italic">Live Sangeet &amp; Concerts</p>
+                            </div>
+                        </div>
+                        <!-- Artist Card 2: Highest Arch Center (Bollywood Screen Icon) -->
+                        <div
+                            class="flex flex-col gap-space-xs bg-surface-container-lowest/90 p-2.5 rounded-t-[120px] rounded-b-xl border border-secondary/40 backdrop-blur-md transform sm:-translate-y-4 shadow-[0_25px_60px_rgba(0,0,0,0.7)] hover:-translate-y-6 transition-transform">
+                            <div class="w-full h-84 rounded-t-[110px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Charismatic top Bollywood male superstar actor making an entrance at a film premiere red carpet in a tailored sherwani, paparazzi flashbulbs, dramatic high contrast lighting, confident warm smile"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ-gknWPIIOa3BKYAnK-3IZhfAVaqThzrg8cYkamdIRq7Rj--H-KP935Vfew-qIhjlD_iqs0895X5GmJotWAI1JtKZqykJvigXWMLE2PGWBoCIvouIjAJpaHuykV_xWubmm6YHB_oGfyuPxCVh3y20mijA1OAVwCjF1hszW97O4PoWlPE7AgEyqSZogs-vPmBPLMN-j_2RPOZqMc0TxajRFLgFdezei0iK5vzOD2IWHUdEuHWwIX2N5A" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-tertiary-container text-[10px] font-label-caps uppercase tracking-wider text-tertiary font-bold">Headline
+                                    Icon</span>
+                            </div>
+                            <div class="px-2 pb-1 text-center">
+                                <h4 class="font-headline-md text-xl text-primary font-bold">Leading Screen Hero</h4>
+                                <p class="font-annotation text-xs text-on-surface-variant italic">Grand Ribbon Cutting
+                                    &amp; Keynotes</p>
+                            </div>
+                        </div>
+                        <!-- Artist Card 3 (Sensational Stand-Up / Emcee) -->
+                        <div
+                            class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-2.5 rounded-t-[100px] rounded-b-xl border border-primary/20 backdrop-blur-md transform sm:translate-y-8 hover:translate-y-4 transition-transform">
+                            <div class="w-full h-68 rounded-t-[90px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Dynamic Indian celebrity television host and anchor laughing under purple stage floodlights holding a gilded microphone with an exuberant crowd silhouette in front, high energy luxury gala atmosphere"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZTHz7VRxsNEb6l9OLs1FQ8DP4vCRu82fOJQAkKC627gJ_axzOCbsfilz8SNKRhT_5mOj4IvY62xFdjorgbyytcpjn605TIeGmK8jn7oTSXV8Aw6rv0eSJJZd11dVq8jgAtw4RwnwUgHJOsuK1q74A17_F6BSRQ8LS-lx2yWDCAO7V2XgUr2oSBfaJpJMHh4M9vdEK2gcgGzVlG0okQDF2BxVLuF53g3rqx2YFwRTKX-ZzLVaZuMbGFA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-surface-container-high/90 text-[10px] font-label-caps uppercase tracking-wider text-secondary">Master
+                                    of Ceremonies</span>
+                            </div>
+                            <div class="px-2 pb-1 text-center">
+                                <h4 class="font-headline-md text-lg text-on-surface">Ace Host &amp; Comic</h4>
+                                <p class="font-annotation text-xs text-primary italic">Corporate Galas &amp; Red Carpets
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 6. FEATURED EVENT TICKET (Ivory #F7F0E4, Perforated Luxury Cinema Ticket) -->
+            <section class="w-full bg-[#F7F0E4] text-[#1A0B2E] px-gutter md:px-margin lg:px-margin-lg py-space-xl">
+                <div class="max-w-4xl mx-auto flex flex-col items-center gap-space-md">
+                    <div class="text-center">
+                        <span
+                            class="font-label-caps text-xs text-[#4B1D7A] uppercase tracking-[0.25em] font-semibold">Special
+                            Presentation Pass</span>
+                        <h2 class="font-headline-xl text-3xl sm:text-4xl font-semibold text-[#1A0B2E]">
+                            Upcoming Crystal <em class="italic text-[#B02A8C] font-headline-xl">Broadside</em>.
+                        </h2>
+                    </div>
+                    <!-- The Perforated Ticket Wrapper -->
+                    <div
+                        class="w-full relative bg-white rounded-2xl shadow-[0_20px_50px_rgba(26,11,46,0.12)] border border-[#1A0B2E]/10 flex flex-col md:flex-row overflow-hidden">
+                        <!-- Left Stub: Deep Ink Plum Backstage Stub -->
+                        <div
+                            class="md:w-5/12 bg-primary-container text-on-surface p-space-md flex flex-col justify-between relative border-b md:border-b-0 md:border-r border-dashed border-primary/40">
+                            <!-- Ticket Notch Left (Only on MD) -->
+                            <div
+                                class="hidden md:block absolute -right-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#F7F0E4]">
+                            </div>
+                            <div class="flex flex-col gap-space-xs">
+                                <div
+                                    class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded bg-tertiary-container text-tertiary text-[10px] font-label-caps tracking-widest uppercase">
+                                    Confirmed Production
+                                </div>
+                                <h3 class="font-headline-md text-2xl text-primary font-bold mt-2">TAMAS SCREEN AWARDS
+                                    2026</h3>
+                                <p class="font-annotation text-sm text-secondary-fixed italic">Celebrating Cinematic
+                                    Excellence</p>
+                            </div>
+                            <div
+                                class="mt-space-md pt-space-xs border-t border-primary/20 flex flex-col gap-1 font-body-sm text-xs text-on-surface-variant">
+                                <p><span class="text-primary font-medium">DATE:</span> 22nd November 2026</p>
+                                <p><span class="text-primary font-medium">VENUE:</span> Grand Ballroom, Goa Convention
+                                    Centre</p>
+                                <p><span class="text-primary font-medium">SHOWFLOW:</span> Red Carpet (18:00) | Main
+                                    Awards (20:00)</p>
+                            </div>
+                        </div>
+                        <!-- Right Body: Ivory VIP Admission Stub -->
+                        <div
+                            class="md:w-7/12 p-space-md flex flex-col justify-between bg-white text-[#1A0B2E] relative">
+                            <!-- Ticket Notch Right (Only on MD) -->
+                            <div
+                                class="hidden md:block absolute -left-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#F7F0E4]">
+                            </div>
+                            <div class="flex flex-col gap-space-xs">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="font-label-caps text-[11px] uppercase tracking-widest text-[#4B1D7A] font-bold">Produced
+                                        By Crystal Events</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-[#F1D9E4] text-[#B02A8C] text-xs font-semibold">VIP
+                                        PASS LEVEL A</span>
+                                </div>
+                                <p class="font-body-sm text-xs text-[#1A0B2E]/75 leading-relaxed mt-1">
+                                    Crystal Event Management is proud to helm the complete scenography, 60-head artist
+                                    convoy, LED stage volume, and television broadcast flow for India’s fastest-growing
+                                    independent cinema awards.
+                                </p>
+                            </div>
+                            <!-- Barcode, Serial Number & Access CTA -->
+                            <div
+                                class="mt-space-md pt-space-xs border-t border-[#1A0B2E]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+                                <div class="flex flex-col">
+                                    <!-- Inline Stylized Barcode SVG -->
+                                    <svg class="h-8 w-36 text-[#1A0B2E]/80" fill="currentColor" viewbox="0 0 144 32">
+                                        <rect height="32" width="3" x="0" y="0"></rect>
+                                        <rect height="32" width="1" x="5" y="0"></rect>
+                                        <rect height="32" width="4" x="8" y="0"></rect>
+                                        <rect height="32" width="2" x="14" y="0"></rect>
+                                        <rect height="32" width="1" x="18" y="0"></rect>
+                                        <rect height="32" width="5" x="22" y="0"></rect>
+                                        <rect height="32" width="2" x="29" y="0"></rect>
+                                        <rect height="32" width="1" x="33" y="0"></rect>
+                                        <rect height="32" width="4" x="36" y="0"></rect>
+                                        <rect height="32" width="3" x="42" y="0"></rect>
+                                        <rect height="32" width="1" x="48" y="0"></rect>
+                                        <rect height="32" width="6" x="52" y="0"></rect>
+                                        <rect height="32" width="2" x="60" y="0"></rect>
+                                        <rect height="32" width="3" x="65" y="0"></rect>
+                                        <rect height="32" width="1" x="71" y="0"></rect>
+                                        <rect height="32" width="5" x="74" y="0"></rect>
+                                        <rect height="32" width="2" x="82" y="0"></rect>
+                                        <rect height="32" width="4" x="86" y="0"></rect>
+                                        <rect height="32" width="1" x="93" y="0"></rect>
+                                        <rect height="32" width="3" x="96" y="0"></rect>
+                                        <rect height="32" width="5" x="101" y="0"></rect>
+                                        <rect height="32" width="2" x="108" y="0"></rect>
+                                        <rect height="32" width="1" x="112" y="0"></rect>
+                                        <rect height="32" width="4" x="115" y="0"></rect>
+                                        <rect height="32" width="2" x="122" y="0"></rect>
+                                        <rect height="32" width="6" x="126" y="0"></rect>
+                                        <rect height="32" width="2" x="135" y="0"></rect>
+                                        <rect height="32" width="4" x="140" y="0"></rect>
+                                    </svg>
+                                    <span
+                                        class="font-label-caps text-[9px] tracking-[0.2em] text-[#1A0B2E]/60 mt-0.5">#CY-2026-TMA-088</span>
+                                </div>
+                                <a class="px-space-md py-space-xs rounded-full bg-[#1A0B2E] text-white hover:bg-[#4B1D7A] transition-colors font-label-ui text-xs font-semibold"
+                                    href="#enquiry-section">
+                                    VIP Inquire &amp; RSVP
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 7. PORTFOLIO GALLERY (Ink Plum #1A0B2E, Asymmetric Couture Masonry) -->
+            <section
+                class="w-full bg-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+                    <!-- Section Title & Filter Tabs -->
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-primary uppercase tracking-[0.25em] font-semibold">03
+                                — Archival Folio</span>
+                            <h2 class="font-headline-xl text-3xl sm:text-5xl font-semibold text-on-surface mt-1">
+                                Moments we <em class="italic text-tertiary font-headline-xl">lit up</em>.
+                            </h2>
+                        </div>
+                        <!-- Curated Pills -->
+                        <div class="flex flex-wrap gap-2">
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-tertiary-container text-tertiary font-label-ui text-xs font-semibold shadow-sm">All
+                                Productions</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Weddings</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Corporate
+                                Summits</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Celebrity
+                                Stages</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Goa
+                                Estates</button>
+                        </div>
+                    </div>
+                    <!-- Asymmetric Editorial Masonry Grid (6 Items) -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+                        <!-- Folio 1: Tall Heritage Mandap (Cols 7) -->
+                        <div
+                            class="md:col-span-7 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[380px] p-2">
+                            <div class="w-full h-full min-h-[380px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Grand royal palace wedding reception at night in Rajasthan, monumental carved stone arches bathed in warm gold and magenta floodlights, water reflection fountain, luxury floral decor with thousands of roses"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWNNgcoz25GTrm1Q9wYhfcDWvAkdJQ6td5TZy4A7d2skk0YYRKLfErJyGmyJSkCgasEfdJIEd__dCCWrleS96U8Zo1roLqGg9bPbIF8pLsqtGPqzmH3fB2WHEt4Oi3t8z72fkPJzaSmvHhzCVFgMW8U_bYapw32OqhFm5kyJcG5uRm_3QnTtgbFOl-vhXsoq_E76Wi4mCKcxCupea6umOztSVT7CJd1ySGwOJEAwQvpZ8mCw8TJ-nTIg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <!-- Hand-taped Sticky Label -->
+                                <div
+                                    class="absolute top-4 left-4 rotate-[-3deg] bg-[#F7F0E4] text-[#1A0B2E] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Pune Royal Sangeet • 2024
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-label-caps text-primary-fixed">
+                                    <span>Palace Architecture &amp; Sound</span>
+                                    <span class="text-tertiary font-bold">Udaipur, Rajasthan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Folio 2: Cinematic Wide Corporate Stage (Cols 5) -->
+                        <div
+                            class="md:col-span-5 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[380px] p-2">
+                            <div class="w-full h-full min-h-[380px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Futuristic corporate summit arena with curved giant 8K LED screen displaying high-end tech visualizations, illuminated runway, executive speakers in silhouette, modern conference lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuByO_U4lCwQvYZpwUEQCjhZZidGcsFkw4KZT29mEpzWWKl_SarkLJF-jB2MbGfk4ZoDnFkm3yvQB7-zZc3eyxF1Y166GAJFGSYzEFNxMsvWrvOkMzYncVLBE0FsDbCIxwagRI4IBx9oOYLL8JzpMPDDpc1HzZiJ7ubJ3CWqA0Cy3yX8TeE7nwpk9nNJ0uL07OzNi9KS3YWIccL6ORcJ2lybnkU4X6aJAzXgfacF5dG2gq7MxDGzKiSaHA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 rotate-[2deg] bg-[#F1D9E4] text-[#4B1D7A] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Tech Leadership Summit
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-label-caps text-secondary-fixed">
+                                    <span>1,400 Delegates</span>
+                                    <span class="text-secondary font-bold">BKC, Mumbai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Folio 3: Goa Beachfront Sunset Vows (Cols 4) -->
+                        <div
+                            class="md:col-span-4 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[340px] p-2">
+                            <div class="w-full h-full min-h-[340px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Bohemian luxury destination wedding on a secluded Goa beach at golden sunset, driftwood canopy wrapped in pampas grass and white lilies, gentle ocean tide, fairy lights strung overhead"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymyQeIYraFATrOulxorY2pc1BsNFDaECrGcGPcf5D4DGfXIGFpnqfR0pNQUONlfYBVPkjIIOI6u1Z_kDTHSjZwpMEdbVhH3dTMVdEY_ebxcZdtvC3tRsozjQvoE5URE0agi_F4SNyA2Zr-4Ydq8SIO0BTBC8hwE-kl0T4rYc7_Ra5uH_oS2fQbLA5hM7CpjQdJHfHADrZO7sI_SE7LvvffTPFFfMU31OeZdem8WLqPAwatP6EIfLeSA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 rotate-[-2deg] bg-[#F7F0E4] text-[#1A0B2E] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Goa Sunset Mandap
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 text-xs font-label-caps text-primary-fixed">
+                                    <span>Private Estate Takeover, Morjim</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Folio 4: Concert Pyrotechnics (Cols 4) -->
+                        <div
+                            class="md:col-span-4 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[340px] p-2">
+                            <div class="w-full h-full min-h-[340px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Massive live stage concert at an arena awards night, sparks and cold pyrotechnics raining from the overhead trusses, laser beams cutting through ambient haze, silhouetted performer with arms raised"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWrVRYhL6jBWmcPVHO3yQBJBGFJz3w183oUfVSGVEt7oeNMVzc8dpvWuDCVS4uGm57gLUP7YAOeosjxVX4St4MqcM4HFLyUeiEtNSros0u95OwTZwoWHGgQBZkbjXxz2wpVawiDqAtzlzS76DGaqadipI5rfIbVz0WIRfa_coWubYmxr2hgf6KOGH5DoA9ghTq9TWGEi-sdOPJfk4dTG-rrwzDsb61yNHFFlYDnaH5rAH8d8f9OoadOg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 rotate-[3deg] bg-tertiary-container text-tertiary px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    National Film Gala
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 text-xs font-label-caps text-secondary-fixed">
+                                    <span>Cold Pyro &amp; Kinetic Rigs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Folio 5: Velvet Noir Floral Pavilion (Cols 4) -->
+                        <div
+                            class="md:col-span-4 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[340px] p-2">
+                            <div class="w-full h-full min-h-[340px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Editorial indoor luxury reception dining hall with ceiling dripping in cascading crimson wisteria and emerald crystal chandeliers, dark velvet tablecloths, glowing taper candles, bespoke tablescape"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYe1jes9rs0J_I_ZEPGjLZndHVMFkYTHyggSepAGv52qByE67sTvOHFyaOst7SbHt4YzNyttKWDIG30UB8mHjlJLdG7J9blwLlr0p0A-WRORt-RAJarbPHO6etSgjp3BmugWQHfojRdnT9mfLCNn5Ri9stqiV0Ht8VLsBj2cdIy7RYXgLMGvN2iTnWFa9u_uUzrRIPyanWWUt4e21KCLhDFNKSbcDcxW0SB4Vyl7mBZBeRG4sx0pAjPA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 rotate-[-1deg] bg-[#F7F0E4] text-[#1A0B2E] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Velvet Noir Gala
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 text-xs font-label-caps text-primary-fixed">
+                                    <span>Sensory Scenography, Delhi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Center Large Pill Link -->
+                    <div class="flex justify-center pt-space-xs">
+                        <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-surface-container-high hover:bg-secondary-container text-primary hover:text-on-secondary-container border border-primary/20 transition-all font-label-ui text-label-ui"
+                            href="#enquiry-section">
+                            <span>View Complete Event Archive (120+ Curated Shows)</span>
+                            <span class="material-symbols-outlined text-[18px]">photo_library</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 8. AWARDS & RECOGNITION (Ivory #F7F0E4, Editorial Trophy Wall) -->
+            <section
+                class="w-full bg-[#F7F0E4] text-[#1A0B2E] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                    <!-- Narrative Left (5/12) -->
+                    <div class="lg:col-span-5 flex flex-col gap-space-sm">
+                        <div class="inline-flex items-center gap-space-xs">
+                            <span class="w-6 h-[1.5px] bg-[#B02A8C]"></span>
+                            <span
+                                class="font-label-caps text-xs text-[#B02A8C] uppercase tracking-[0.2em] font-semibold">04
+                                — Honours &amp; Laurels</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1A0B2E] leading-tight">
+                            Twice named <em class="italic text-[#4B1D7A] font-headline-xl">Best</em> in the business.
+                        </h2>
+                        <p class="font-body-md text-[#1A0B2E]/80 leading-relaxed">
+                            Peer recognition is the quiet metric of our obsession with backstage perfection. Crystal was
+                            awarded back-to-back industry crowns for seamless crowd architecture, zero-latency celebrity
+                            transit, and boundary-pushing floral engineering.
+                        </p>
+                        <!-- Media Mentions Strip -->
+                        <div class="pt-space-xs border-t border-[#1A0B2E]/10 flex flex-col gap-2">
+                            <span
+                                class="font-label-caps text-[10px] text-[#1A0B2E]/60 uppercase tracking-widest">Documented
+                                in National Press:</span>
+                            <div
+                                class="flex flex-wrap items-center gap-space-md text-[#1A0B2E]/70 font-label-caps text-xs tracking-wider font-semibold">
+                                <span>TIMES OF INDIA</span>
+                                <span class="text-[#B02A8C]">✦</span>
+                                <span>EVENT FAQS</span>
+                                <span class="text-[#B02A8C]">✦</span>
+                                <span>WEDDINGSUTRA</span>
+                                <span class="text-[#B02A8C]">✦</span>
+                                <span>HINDUSTAN TIMES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Laurel Medallions & Polaroid Right (7/12) -->
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md items-center">
+                        <!-- Trophy 1 (2023) with Laurel -->
+                        <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_15px_35px_rgba(26,11,46,0.08)] flex flex-col items-center text-center gap-2 relative">
+                            <!-- Subtle Laurel Line Art SVG -->
+                            <svg class="w-16 h-16 text-[#D6A94A]" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewbox="0 0 64 64">
+                                <path d="M12 48 C 8 32, 16 16, 32 8 C 28 20, 24 36, 12 48 Z"></path>
+                                <path d="M52 48 C 56 32, 48 16, 32 8 C 36 20, 40 36, 52 48 Z"></path>
+                                <circle cx="32" cy="32" fill="#D6A94A" fill-opacity="0.15" r="6"></circle>
+                            </svg>
+                            <span class="font-headline-md text-xl font-bold text-[#1A0B2E]">Best Event Management
+                                Co.</span>
+                            <span
+                                class="font-label-caps text-xs text-[#B02A8C] tracking-widest font-semibold uppercase">National
+                                Conclave • 2023</span>
+                            <p class="font-body-sm text-xs text-[#1A0B2E]/70">Honoured for outstanding destination
+                                wedding execution across Western India.</p>
+                        </div>
+                        <!-- Trophy 2 (2024) with Tilted Polaroid -->
+                        <div class="relative flex flex-col items-center">
+                            <div
+                                class="w-full bg-white p-3 shadow-[0_18px_40px_rgba(26,11,46,0.12)] rotate-2 hover:rotate-0 transition-transform duration-500 rounded-sm">
+                                <div class="w-full h-52 overflow-hidden rounded-sm relative">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Crystal Event crew holding a heavy gilded trophy onstage with golden confetti fluttering in stage lights, proud emotional team moment, luxury award gala documentary style"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX3qnknADCvwG6sktqmR2C1okrsdyGzXKVYn4BWmUTmkaSAZ-prs0ZhQGm_1FoEt4ULH1bFaPeX2_QOQxl-rILcRMGJuHHuBo1f0qNMP4pg5XPCwpTy0Bh33_luaNCFptr7i3JwoMLCM7TQGOwhix2kwoGCq5XjZ_CA91nHDibgzrRyGsRhx7leMju-F9Rw48gX-HhC0bMgmHzFeYOrBreNbU_oPEl9Kn5VqSTD0XQ1DNNQi6Ev6L0sw" />
+                                </div>
+                                <div class="mt-2 text-center">
+                                    <p class="font-annotation text-sm text-[#1A0B2E] italic">"Proud moment with our core
+                                        stage crew."</p>
+                                    <p
+                                        class="font-label-caps text-[10px] text-[#4B1D7A] font-bold tracking-widest uppercase mt-0.5">
+                                        Event Company of the Year — 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 9. HOW WE WORK (Royal Violet #4B1D7A, Winding Roadmap) -->
+            <section
+                class="w-full bg-secondary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden">
+                <div class="max-w-6xl mx-auto flex flex-col gap-space-lg relative z-10">
+                    <div class="text-center max-w-xl mx-auto">
+                        <span
+                            class="font-label-caps text-xs text-secondary-fixed uppercase tracking-[0.25em] font-semibold">05
+                            — Production Protocol</span>
+                        <h2 class="font-headline-xl text-3xl sm:text-5xl font-semibold text-on-surface mt-1">
+                            From first call to <em class="italic text-secondary font-headline-xl">final bow</em>.
+                        </h2>
+                        <p class="font-annotation text-annotation italic text-primary-fixed-dim mt-2">
+                            "This is where the magic begins—structured chaos turned into effortless grace."
+                        </p>
+                    </div>
+                    <!-- Roadmap Winding Nodes -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative pt-space-md">
+                        <!-- Connecting Line for Desktop -->
+                        <div class="hidden md:block absolute top-12 left-10 right-10 h-0.5 bg-primary/30 z-0"></div>
+                        <!-- Node 1 -->
+                        <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                01
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">Tell Us Your Dream</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Complimentary visioning session. We
+                                deconstruct your aesthetic, headcount, and budget tolerances.</p>
+                        </div>
+                        <!-- Node 2 -->
+                        <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                02
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">3D Scenography Deck</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Photorealistic stage renders, CAD
+                                floorplans, lighting blueprints, and minute-by-minute run of show.</p>
+                        </div>
+                        <!-- Node 3 -->
+                        <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                03
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">Talent &amp; Rigging Locked</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Celebrity contracts, hospitality
+                                riders, floral imports, sound checks, and technical dry runs.</p>
+                        </div>
+                        <!-- Node 4 -->
+                        <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                04
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">Zero-Friction Showflow</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Crystal’s radio-linked floor
+                                managers run every cue. You sip vintage champagne as an honored host.</p>
+                        </div>
+                        <!-- Node 5 -->
+                        <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-tertiary-container text-tertiary border-2 border-tertiary/60 flex items-center justify-center font-headline-md text-xl font-bold shadow-xl">
+                                05
+                            </div>
+                            <h4 class="font-headline-md text-lg text-primary mt-1">The Final Bow</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">4K cinematic sizzle reel delivery,
+                                guest thank-you logistics, and lasting memories etched in gold.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 10. BEHIND THE SCENES / THE CRYSTAL CREW (Ivory #F7F0E4, Candid Polaroid Film Strip) -->
+            <section
+                class="w-full bg-[#F7F0E4] text-[#1A0B2E] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm border-b border-[#1A0B2E]/10 pb-space-sm">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-[#B02A8C] uppercase tracking-[0.2em] font-semibold">06
+                                — Backstage Access</span>
+                            <h2 class="font-headline-xl text-3xl sm:text-4xl font-semibold text-[#1A0B2E]">
+                                The artisans <em class="italic text-[#4B1D7A] font-headline-xl">behind</em> the velvet
+                                curtain.
+                            </h2>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-annotation text-sm text-[#4B1D7A] italic">We train the next generation of
+                                event makers too.</span>
+                            <a class="font-label-caps text-xs text-[#B02A8C] hover:underline uppercase font-bold"
+                                href="#enquiry-section">Internships →</a>
+                        </div>
+                    </div>
+                    <!-- Candid Photographic Strip with Tape Stubs -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+                        <!-- Candid 1 -->
+                        <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[-1.5deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Technical stage crew in black Crystal Event t-shirts adjusting heavy steel truss lighting and purple spotlight beam at 3 AM in a vast empty ballroom, candid documentary shot"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMNoJ-HEg_lQ8e2qlRhsXrU2c45X0Rvf2Te583V1MpNcPDoeqeuhZF3YRCVmUjxqBkoO9-ciKxcZyccsIZJ_WH7GSv0-RqYjqdn1l92TglTNLTLPcz0_ZpkVJP4T39fMxt_vRfeF4X1H3Fsy3_4z1_feD3tlyfzVUpqnw3OWAOxvYFJTGaXAnxXorCEmQgqGdeSxc5l3vVhlFFUzWhfzqYoj4ke6zta9xw78mZE3OxqrmnuMmx4xsjkw" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#1A0B2E] italic">"3:00 AM truss alignment before
+                                    the doors open."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#4B1D7A] tracking-wider uppercase font-semibold">Technical
+                                    Crew</span>
+                            </div>
+                        </div>
+                        <!-- Candid 2 -->
+                        <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[1.5deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Indian floral artisan masterfully stringing vibrant orange and yellow marigold garlands by hand across an intricate wooden mandap frame, beautiful morning sunlight, authentic focus"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUttVnjU2VQZqJmBfAOZLCRE3dafGnl3yXziUI3agYEd2S1arv0xSCnd7h-7wvWnofDOLlO2mDDUEG-IwEmb7kJvowY29ZeKWryTBW7cU1bGy8WapKeRPr_n9SNJKeusPFobtFsEMct0X_8NO7fxnDmdP23LEgsj0edGGw-Fm-qzYDDVdsSSTuvC81JVE9d5giRVkAjCeOG8toLZ6Icf0-ib2OsTYs7wY89NamjFu5z3ioQLO252ZC3g" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#1A0B2E] italic">"12,000 fresh marigolds
+                                    hand-strung in Jaipur."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#4B1D7A] tracking-wider uppercase font-semibold">Floral
+                                    Artisans</span>
+                            </div>
+                        </div>
+                        <!-- Candid 3 -->
+                        <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[-2deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Backstage production manager talking into a radio headset with clipboard in hand while a celebrity silhouette prepares to step onto stage stairs, dramatic blue backstage lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrwjQKhSAd8yQ3SrshWIUsDfezOiRTYLVH7J7nxmyENfUgJosT7ElGDsxxjei0I_xGPnWVzpyn_hMCRl3Urc_uhrYpxenFECLXVRm2v0w7tz7fjxvFTaGLdUoGqiCuz_LrNpOPqN7tJ8v8OL96V9K7VyFcllNFgA-OP-Owv8A-qr8YLPMg-l_NKuZMO_iNrUbFmKDXvIVKvKi7bpBfDHBSvMk9gkIxqAJwLqDu54NNAsU5gDG-gG6DDw" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#1A0B2E] italic">"60 seconds to curtain call
+                                    with security convoy."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#4B1D7A] tracking-wider uppercase font-semibold">Floor
+                                    Directors</span>
+                            </div>
+                        </div>
+                        <!-- Candid 4 -->
+                        <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[2deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Creative design team reviewing architectural blueprints and fabric swatches on a rustic wooden studio desk with steaming cups of Indian chai, cozy atmospheric lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4bxH2NYao1QjKbPGWZ2UJcVOW42Bz4HJ_0Ux3fCdBauusPtFiMVC1DWGNXSfKBa3MvPafZ1opEY9Yg8AhdO7bg2_b1dl8yGR_kyYD3GTxsLgQf8HPxFnC2qqYx_x_N2D4MRXAOpRlX1NhWOGaheDbrJEbWLvaJQShRtU5-9tRNS1CT1TFXcFzMU-vtbimSrf-fB5oOs3MdwfXdT11tsHCLL_hdPxQn33Yod-hbsEqr9OzjyQMJcuNpw" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#1A0B2E] italic">"The initial sketch that became
+                                    a palace pavilion."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#4B1D7A] tracking-wider uppercase font-semibold">Concept
+                                    Scenographers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 11. TESTIMONIALS (Blush #F1D9E4, Hand-Penned Letter Cards) -->
+            <section
+                class="w-full bg-[#F1D9E4] text-[#1A0B2E] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+                    <div class="text-center max-w-lg mx-auto">
+                        <span
+                            class="font-label-caps text-xs text-[#B02A8C] uppercase tracking-[0.25em] font-semibold">07
+                            — Host Letters</span>
+                        <h2 class="font-headline-xl text-3xl sm:text-4xl font-semibold text-[#1A0B2E] mt-1">
+                            Love letters from <em class="italic text-[#4B1D7A] font-headline-xl">our hosts</em>.
+                        </h2>
+                        <p class="font-annotation text-sm text-[#1A0B2E]/70 italic mt-1">Unfiltered words from families
+                            and corporate boards who trusted us with their defining nights.</p>
+                    </div>
+                    <!-- 3 Pinned Ivory Stationery Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                        <!-- Letter 1 (Udaipur Royal Wedding) -->
+                        <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_14px_35px_rgba(26,11,46,0.06)] relative border border-[#1A0B2E]/5 rotate-[-1deg] hover:rotate-0 transition-transform">
+                            <!-- Tape Tab -->
+                            <div
+                                class="w-16 h-4 bg-[#D6A94A]/30 absolute -top-2 left-1/2 -translate-x-1/2 rotate-1 backdrop-blur-xs">
+                            </div>
+                            <div class="flex items-center gap-1 text-[#D6A94A] mb-space-xs text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="font-body-md text-sm text-[#1A0B2E]/85 leading-relaxed">
+                                "The mandap didn’t feel like an event setup—it looked like an architectural dream
+                                sequence out of a period film. Our guests from New York and London are still texting us
+                                about the Sangeet reveal!"
+                            </p>
+                            <div class="mt-space-md pt-space-xs border-t border-[#1A0B2E]/10">
+                                <p class="font-headline-md text-sm font-bold text-[#4B1D7A]">Devika &amp; Sameer Mittal
+                                </p>
+                                <p class="font-annotation text-xs text-[#1A0B2E]/60 italic">Royal Destination Sangeet,
+                                    Udaipur</p>
+                            </div>
+                        </div>
+                        <!-- Letter 2 (Corporate Summit) -->
+                        <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_14px_35px_rgba(26,11,46,0.06)] relative border border-[#1A0B2E]/5 rotate-[1.5deg] hover:rotate-0 transition-transform">
+                            <!-- Tape Tab -->
+                            <div
+                                class="w-16 h-4 bg-[#B02A8C]/20 absolute -top-2 left-1/2 -translate-x-1/2 -rotate-1 backdrop-blur-xs">
+                            </div>
+                            <div class="flex items-center gap-1 text-[#D6A94A] mb-space-xs text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="font-body-md text-sm text-[#1A0B2E]/85 leading-relaxed">
+                                "Managing 1,200 executive delegates with simultaneous international video uplinks and an
+                                A-list Bollywood comedy night requires military precision. Crystal didn’t drop a single
+                                cue."
+                            </p>
+                            <div class="mt-space-md pt-space-xs border-t border-[#1A0B2E]/10">
+                                <p class="font-headline-md text-sm font-bold text-[#4B1D7A]">Rajiv Nambiar</p>
+                                <p class="font-annotation text-xs text-[#1A0B2E]/60 italic">VP Corporate Affairs, Global
+                                    Fintech Summit</p>
+                            </div>
+                        </div>
+                        <!-- Letter 3 (Goa Anniversary) -->
+                        <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_14px_35px_rgba(26,11,46,0.06)] relative border border-[#1A0B2E]/5 rotate-[-1deg] hover:rotate-0 transition-transform">
+                            <!-- Tape Tab -->
+                            <div
+                                class="w-16 h-4 bg-[#D6A94A]/30 absolute -top-2 left-1/2 -translate-x-1/2 rotate-2 backdrop-blur-xs">
+                            </div>
+                            <div class="flex items-center gap-1 text-[#D6A94A] mb-space-xs text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="font-body-md text-sm text-[#1A0B2E]/85 leading-relaxed">
+                                "Having our favorite Bollywood playback singer perform unplugged right by the Goa beach
+                                for our 25th anniversary felt completely surreal. The rider, security, and sound were
+                                effortlessly handled."
+                            </p>
+                            <div class="mt-space-md pt-space-xs border-t border-[#1A0B2E]/10">
+                                <p class="font-headline-md text-sm font-bold text-[#4B1D7A]">Kavita &amp; Rohan Oberoi
+                                </p>
+                                <p class="font-annotation text-xs text-[#1A0B2E]/60 italic">Silver Jubilee Beach Soirée,
+                                    South Goa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 12. INSTAGRAM STRIP (Ink Plum #1A0B2E, Grid of Visual Moments) -->
+            <section
+                class="w-full bg-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm border-b border-primary/20 pb-space-sm">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-secondary-fixed uppercase tracking-[0.2em] font-semibold">Live
+                                Social Diary</span>
+                            <h3 class="font-headline-md text-2xl text-on-surface mt-0.5">
+                                Follow the sparkle <span class="text-tertiary">@crystal_event_management_</span>
+                            </h3>
+                            <p class="font-annotation text-xs text-on-surface-variant italic">5,360+ members in our
+                                celebration family</p>
+                        </div>
+                        <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container transition-all font-label-ui text-xs font-semibold self-start sm:self-auto"
+                            href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+                            <span>Follow On Instagram</span>
+                            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                        </a>
+                    </div>
+                    <!-- Row of 6 Square Posts -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Close up of a royal bride walking down the aisle under a canopy of fresh tuberoses and jasmine, soft golden candlelight, emotional wedding moment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhFFEhBGm6MCrf4PS5RHpgSnl-JbWudaoJxnZVFJrQZ7CoOmacVFZr57QGFKXOlsejDWoEpR3bGzEwSHwF4itHHsOSZoK4a9nhteIBvb06bjzO396bsY26M-vqPvbF4BuFh-fGHum9reesBj0YzIpdP1Gtj9ZTiaKANkoI91iAPm4gCWqFlp-6piU0nGdeR4Yk4CIaBK57U6liDSj3tbXV1rrUzaHhFJzVpq3qsz1LIcufVu3-oWYq-A" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Concert stage laser lights piercing through purple atmospheric fog, crowd waving hands in celebration, energetic musical night"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGMWuDm9ABKlEC3elspZ82cxFf9hn8RknS9VTMqDG01eIrnMIggYwYbbvCE9mrMbc-S0MC2fg4vgdm9pP_9sNgefM23AD9IQ_FQrbRQbFMc0euBILh0ADXFOwyq7GZSXicCJKQzFnPeDzaV-rkaBYwzbrIByT8Z2t2-wRrpaD1Vdd6yKwy7cJ8-GkKcfTmXyJCMJyKnPb6-FM4qKkJ07iCzp2ImNatl9yEgGqaiyfkdJXtf_ZFixCwqg" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Architectural centerpiece of hand-blown crystal candleholders reflecting warm flames over royal purple silk tablecloths at a gala dinner"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiGx6Sv2csEOm3B9bY0htJ8lsX4XGsa_CMfMk6wLFEyeYL2qNEFM0OV0_UzQ5N5g7ezjN_I1F4HZKc7Auo1iv8hgu-dJYaN1PledNdl_6ZilW79xZvunfhMHsJSMXSiZDTCKt0m2yABsXP8QTgHcbXGPsSumIZqt1sjrFUILXhe5dm7OsgDrU8RO8Vd2lf31Vn4vYQR-fv5sPi38d1x_GqSZhPFuQt4Uj-LK29rGAVEyhXMp_rsdOvZQ" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Celebrity Bollywood star posing against Crystal Event backdrop banner on red carpet, media cameras flashing in reflection"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmrg9lsmRZQh-EyUrL7gxV3ehGZG5rpKrB433C0ikopV1fN1bOCuXCnp2uPf85yZPlphkXwUrhaKa5G3H-aLfsIZo-IjAz0Go-3dTeOPwGbg2FNYgKVzg0KjI-IhmAPmRHqKXlqEgu8zVSsY_gEDsv1g-_VeUmAqr7JkE2lVwYafFbCgDjzUdjMCajCGQis4M_ww26aj5mq1mVkIaFdZnWJgdSZvRvzMsI_u1PM4Q48xuNDX6urnrWjA" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Sunset cocktail gathering on a luxury yacht deck off the coast of Goa, guests toasting with champagne glasses against vivid orange skies"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb7ppJCc784mjXSjuuGNUWBu0548_xbuVCE5G6qeechvn-7suJePgJ0TRg2tSW1ESZMcKgKjwGBEOEiabgGCdG6S3h4Cg-LPAmhUwCllgBQxvG5iTEoWobvKPnSTaB9KOLFO1JGgQwgKlJGivVtir2woBZBP2l6foSnqJP6tHmrHwzOF8HMNPUZ8sGNpbLk8rjeATpeabLUJLVFV5OixxS2DxOVYznlCMd_SMtivHUr4eaNj42ZFrNtg" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Crystal Event crew team huddle backstage with walkie-talkies and headsets, smiles and shared confidence before curtain rises"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78Ahd8nynNrxzkhT-AMYbbTmFJJiEXyim2F0uiVuoCSS8oog4H8s94-MUJ3EtMwRcXe4c8g4yV5hva1tlYgy-mnPLQtsi4tdFOESLhX5XH9tfjIxea4Wf4ebxXdMdzUtyQ1nnAX7tLILE_kYLIrSuuR7eeJ3YP0hSgCWdeQGBtxVWcPqQ1LPTNpXcd62DKlzxizo_Q2z-RNOETZjs4byi_Q_1lpIK9Y1DrG3HmB1N-U90rmCJUKftig" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 13. FINAL CTA + EDITORIAL ENQUIRY FORM (Magenta to Royal Violet Grand Banner) -->
+            <section
+                class="w-full bg-gradient-to-br from-tertiary-container via-secondary-container to-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden"
+                id="enquiry-section">
+                <div
+                    class="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-primary/20 blur-[120px]">
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                    <!-- Left (5/12): Direct Salon & Concierge Details -->
+                    <div class="lg:col-span-5 flex flex-col gap-space-md">
+                        <div class="inline-flex items-center gap-space-xs">
+                            <span class="text-tertiary">✦</span>
+                            <span
+                                class="font-label-caps text-xs text-primary-fixed uppercase tracking-[0.25em] font-semibold">Immediate
+                                Producer Line</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-on-surface">
+                            Got a dream?<br />
+                            <em class="italic text-tertiary font-headline-xl">Let's shine it up.</em>
+                        </h2>
+                        <p class="font-body-md text-on-surface-variant max-w-md">
+                            Whether you are staging a 2,000-guest heritage wedding in Rajasthan, booking an A-list
+                            Bollywood headliner, or convening an annual corporate summit in Goa, our artistic directors
+                            are ready.
+                        </p>
+                        <!-- Direct Contact Insets -->
+                        <div class="flex flex-col gap-space-sm pt-space-xs">
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">call</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">
+                                        Direct Studio Concierge</p>
+                                    <p class="font-headline-md text-lg text-on-surface">+91 98200 12345 / +91 832 245678
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">
+                                        WhatsApp VIP Fast-Track</p>
+                                    <p class="font-body-md text-sm text-secondary-fixed">Instant calendar checks &amp;
+                                        talent brochures</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">
+                                        Official Inquiries</p>
+                                    <p class="font-body-md text-sm text-on-surface">hello@crystalevents.in</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-space-xs text-xs font-label-caps uppercase tracking-widest text-primary/70">
+                            Ateliers in: Worli, South Mumbai • Panjim, North Goa
+                        </div>
+                    </div>
+                    <!-- Right (7/12): Couture Ivory Booking Card -->
+                    <div class="lg:col-span-7">
+                        <div
+                            class="bg-[#F7F0E4] text-[#1A0B2E] p-space-md sm:p-space-lg rounded-2xl shadow-[0_25px_60px_rgba(10,3,20,0.45)] relative">
+                            <div class="flex flex-col gap-1 mb-space-md border-b border-[#1A0B2E]/10 pb-space-xs">
+                                <span
+                                    class="font-label-caps text-[11px] text-[#4B1D7A] tracking-widest uppercase font-semibold">Event
+                                    Specification Dossier</span>
+                                <h3 class="font-headline-md text-2xl font-bold text-[#1A0B2E]">Book a Creative
+                                    Consultation</h3>
+                            </div>
+                            <!-- Open Baseline Stylized Inputs Form -->
+                            <form class="flex flex-col gap-space-md"
+                                onsubmit="event.preventDefault(); alert('Thank you! Our Creative Director will connect within 4 hours.');">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#1A0B2E]/70 tracking-widest uppercase font-semibold">Full
+                                            Name *</label>
+                                        <input
+                                            class="w-full bg-transparent border-b border-[#1A0B2E]/30 pb-2 text-sm text-[#1A0B2E] focus:outline-none focus:border-[#B02A8C] transition-colors"
+                                            placeholder="e.g., Ananya Birla" required="" type="text" />
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#1A0B2E]/70 tracking-widest uppercase font-semibold">Phone
+                                            Number / WhatsApp *</label>
+                                        <input
+                                            class="w-full bg-transparent border-b border-[#1A0B2E]/30 pb-2 text-sm text-[#1A0B2E] focus:outline-none focus:border-[#B02A8C] transition-colors"
+                                            placeholder="+91 98..." required="" type="tel" />
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#1A0B2E]/70 tracking-widest uppercase font-semibold">Nature
+                                            of Event *</label>
+                                        <select
+                                            class="w-full bg-transparent border-b border-[#1A0B2E]/30 pb-2 text-sm text-[#1A0B2E] focus:outline-none focus:border-[#B02A8C] transition-colors">
+                                            <option value="wedding">Royal &amp; Destination Wedding</option>
+                                            <option value="corporate">Corporate Gala or Summit</option>
+                                            <option value="celebrity">Celebrity / Artist Booking</option>
+                                            <option value="award">Award Show Production</option>
+                                            <option value="anniversary">Milestone Anniversary / Soirée</option>
+                                            <option value="goa">Destination Goa Experience</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#1A0B2E]/70 tracking-widest uppercase font-semibold">Estimated
+                                            Date &amp; Guests</label>
+                                        <input
+                                            class="w-full bg-transparent border-b border-[#1A0B2E]/30 pb-2 text-sm text-[#1A0B2E] focus:outline-none focus:border-[#B02A8C] transition-colors"
+                                            placeholder="e.g., Nov 2026 • 400 Guests" type="text" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label
+                                        class="font-label-caps text-[10px] text-[#1A0B2E]/70 tracking-widest uppercase font-semibold">Destination
+                                        City / Venue</label>
+                                    <input
+                                        class="w-full bg-transparent border-b border-[#1A0B2E]/30 pb-2 text-sm text-[#1A0B2E] focus:outline-none focus:border-[#B02A8C] transition-colors"
+                                        placeholder="e.g., Udaipur, Mumbai, Goa, or Dubai" type="text" />
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label
+                                        class="font-label-caps text-[10px] text-[#1A0B2E]/70 tracking-widest uppercase font-semibold">Vision
+                                        Notes / Artist Preferences</label>
+                                    <textarea
+                                        class="w-full bg-transparent border-b border-[#1A0B2E]/30 pb-2 text-sm text-[#1A0B2E] focus:outline-none focus:border-[#B02A8C] transition-colors resize-none"
+                                        placeholder="Tell us what you picture in your mind's eye..."
+                                        rows="2"></textarea>
+                                </div>
+                                <div class="pt-space-xs flex items-center justify-between">
+                                    <span class="font-annotation text-xs text-[#1A0B2E]/60 italic">Confidentiality
+                                        guaranteed. Direct director response.</span>
+                                    <button
+                                        class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-[#1A0B2E] text-white hover:bg-[#4B1D7A] transition-colors font-label-ui text-label-ui font-semibold shadow-md"
+                                        type="submit">
+                                        <span>Send My Enquiry</span>
+                                        <span class="text-tertiary">✦</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="relative w-full bg-primary-container overflow-hidden pt-space-xl pb-space-lg">
+        <div
+            class="pointer-events-none absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary-container via-primary-container to-surface-container-lowest">
+        </div>
+        <div class="relative z-10 w-full px-gutter md:px-margin lg:px-margin-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl">
+                <div class="flex flex-col gap-space-sm">
+                    <div class="flex items-center gap-space-xs"><img alt="Crystal Event Management Logo"
+                            class="h-8 w-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida/AEtjO1V7cPXNFg71nd_npjbsDf9mxhk1ljwKVQrKNz4OYS-F2HKkSskJJGoYQYCndd1Ix6f8hSiUF3hUT_U1S1KMevCFIb6TuergXiIPmNK1-6Z_gfYmAj9PNu5EIUcIJ_aWbzuR96-MYb07tnl6IHwpbyTKxkVpgpowOa0SDD6cU76VPu5qzJOBnaDko6S-HHTrC2W8qMVnvTiULvpBN17O0lMgB0aZ5_cvzE1MfLYGVKpipqU7RGLc4cNqvCbv" /><span
+                            class="font-headline-md text-headline-md text-primary">Crystal</span></div>
+                    <p class="font-annotation text-annotation italic text-primary/80">we shine up your dream</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Curators of theatrical
+                        galas, couture Indian weddings, and bespoke celebrity broadsides.</p>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-space-xs">Quick
+                        Links</h4>
+                    <nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a
+                            aria-current="page" class="transition-colors text-primary font-bold" data-path="home"
+                            href="#">Home Playbill</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about" href="#">About The Production</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="gallery" href="#">Visual Gallery</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="awards" href="#">Honours &amp; Awards</a></nav>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-space-xs">
+                        Services</h4>
+                    <nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="weddings" href="#">Royal &amp; Destination Weddings</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="corporate" href="#">Corporate Galas &amp; Summits</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="celebrity-booking" href="#">Backstage Artist Engagements</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="bespoke-decor" href="#">Theatrical Scenography</a></nav>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-space-xs">
+                        Contact &amp; Salons</h4>
+                    <div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+                        <p><span class="text-primary font-medium">Phone:</span>1234567789</p>
+                        <p><span class="text-primary font-medium">WhatsApp VIP:</span>12345678</p>
+                        <p><span class="text-primary font-medium">Mumbai Atelier:</span>Mumbai Office Address
+                        </p>
+                        <p><span class="text-primary font-medium">Goa Studio:</span> Goa Office Address</p>
+                    </div>
+                    <div class="flex items-center gap-space-sm mt-space-sm"><a aria-label="Instagram"
+                            class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a
+                            aria-label="Facebook"
+                            class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a
+                            aria-label="YouTube"
+                            class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a></div>
+                </div>
+            </div>
+            <div
+                class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                <p class="font-annotation text-annotation italic text-primary/80">Crafted with love for every
+                    celebration.</p>
+                <p class="font-label-ui text-label-ui text-on-surface-variant">© 2026 Crystal Event Management. All
+                    rights reserved.</p>
+            </div>
+        </div>
+        <div
+            class="pointer-events-none select-none overflow-hidden w-full flex justify-center -mb-8 mt-space-sm opacity-5">
+            <span
+                class="font-headline-xl text-[140px] md:text-[220px] font-bold tracking-widest text-primary uppercase whitespace-nowrap leading-none">CRYSTAL</span>
+        </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-50"><a aria-label="Connect on WhatsApp"
+            class="w-14 h-14 rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center transition-transform hover:scale-110"
+            href="#"><span class="material-symbols-outlined text-[28px]">chat</span></a></div>
+</body>
+
+</html>
