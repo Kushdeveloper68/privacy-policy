@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#7A5600", "secondary-fixed": "#DCE5FF", "on-error-container": "#ffdad6", "primary-fixed": "#FDEFC9", "inverse-on-surface": "#1B2B55", "primary": "#F0C768", "on-background": "#e8e2d6", "surface-container-low": "#0F1C3C", "inverse-surface": "#e8e2d6", "secondary-container": "#1F3F8F", "surface-container": "#12224A", "error": "#ffb4ab", "inverse-primary": "#8A6A0F", "on-tertiary": "#3D2A00", "secondary-fixed-dim": "#9FB4EA", "on-surface": "#e8e2d6", "surface": "#0A1530", "primary-container": "#0B1F4D", "on-primary-fixed": "#2B1F00", "on-surface-variant": "#C3CAE0", "on-primary-container": "#C9A64E", "tertiary-fixed-dim": "#F5B318", "on-secondary-fixed": "#0B1F4D", "primary-fixed-dim": "#F0C768", "surface-variant": "#21356B", "surface-tint": "#F0C768", "surface-container-lowest": "#070F24", "on-secondary": "#0E2A6E", "surface-dim": "#0A1530", "tertiary": "#F5B318", "on-primary-fixed-variant": "#6B5410", "on-primary": "#3D2E00", "error-container": "#93000a", "on-error": "#690005", "outline-variant": "#3A4A78", "background": "#0A1530", "tertiary-fixed": "#FFE3A3", "surface-bright": "#263B73", "secondary": "#9FB4EA", "tertiary-container": "#1B3A8A", "on-tertiary-container": "#F5B318", "surface-container-highest": "#21356B", "on-tertiary-fixed": "#2E2000", "on-secondary-container": "#C9D6FA", "surface-container-high": "#192B5A", "on-secondary-fixed-variant": "#1F3F8F", "outline": "#8C97B8" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "3.5rem", "margin": "2rem", "space-md": "1.25rem", "gutter": "1.5rem", "margin-lg": "4rem", "gutter-lg": "2.5rem", "space-xs": "0.375rem", "margin-sm": "1rem", "space-sm": "0.75rem", "gutter-sm": "1rem", "space-lg": "2rem" }, "fontFamily": { "display-hero-mobile": ["Fraunces"], "headline-xl": ["Cormorant Garamond"], "annotation": ["Fraunces"], "label-ui": ["Plus Jakarta Sans"], "display-hero": ["Fraunces"], "headline-xl-mobile": ["Cormorant Garamond"], "label-caps": ["Cormorant Garamond"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Fraunces"], "headline-lg-mobile": ["Fraunces"], "headline-md": ["Fraunces"] }, "fontSize": { "display-hero-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "annotation": ["17px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400" }], "label-ui": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-hero": ["72px", { "lineHeight": "78px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "600" }], "label-caps": ["13px", { "lineHeight": "18px", "letterSpacing": "0.18em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }] } } } };</script>
+    <title>Fusion Eventt | Wedding &amp; Event Planner in Ahmedabad</title>
+    <meta name="description" content="Fusion Eventt plans weddings, Garba nights, baby showers, birthdays and corporate events in Ahmedabad. Mantra of joy for every occasion." />
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-tertiary-container selection:text-tertiary">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-primary-container/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-20 w-full px-gutter md:px-margin lg:px-margin-lg flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm"><span class="font-headline-xl italic text-2xl font-bold text-tertiary border border-tertiary/60 rounded-full w-10 h-10 inline-flex items-center justify-center shrink-0">fe</span>
+                <div class="hidden sm:flex flex-col"><span
+                        class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Fusion Eventt</span><span class="font-annotation text-annotation italic text-primary/70 -mt-1">mantra of joy</span></div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-space-lg"
+                data-active-classes="bg-secondary-container text-on-secondary-container font-label-ui text-label-ui rounded-full px-space-sm py-space-xs">
+                <a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="weddings" href="#">Weddings</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="corporate" href="#">Corporate</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="celebrity-booking" href="#">Garba &amp; Navratri</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="gallery" href="#">Gallery</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="awards" href="#">Why Fusion</a><a
+                    class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors"
+                    data-path="about" href="#">About</a></nav>
+            <div class="flex items-center gap-space-sm"><a
+                    class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container shadow-[0_0_20px_rgba(245,179,24,0.25)] transition-all font-label-ui text-label-ui"
+                    data-path="plan-my-event" href="#"><span class="font-label-ui text-label-ui font-semibold">Plan My
+                        Event</span><span class="material-symbols-outlined text-primary text-[18px]">east</span></a>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-background">
+        <div class="flex flex-col w-full overflow-hidden text-on-surface">
+                        <section
+                class="relative w-full bg-primary-container px-gutter md:px-margin lg:px-margin-lg pt-12 pb-space-xl overflow-hidden">
+                                <div
+                    class="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-secondary-container/30 blur-[130px]">
+                </div>
+                <div
+                    class="pointer-events-none absolute top-1/4 right-0 w-[550px] h-[550px] rounded-full bg-tertiary-container/40 blur-[140px]">
+                </div>
+                <div
+                    class="pointer-events-none absolute bottom-0 left-1/3 w-[450px] h-[300px] rounded-full bg-secondary/10 blur-[100px]">
+                </div>
+                                <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                                        <div class="lg:col-span-7 flex flex-col gap-space-md">
+                                                <div
+                            class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-surface-container-high/80 text-primary border border-primary/20 shadow-sm backdrop-blur-md">
+                            <span class="text-tertiary text-xs">✦</span>
+                            <span
+                                class="font-label-caps text-[11px] tracking-[0.2em] uppercase text-primary font-bold">Wedding Planner • Event Planner • Corporate</span>
+                            <span class="text-tertiary text-xs">✦</span>
+                        </div>
+                        <h1
+                            class="font-display-hero text-5xl sm:text-6xl lg:text-[84px] lg:leading-[90px] font-bold tracking-tight text-on-surface">
+                            Every occasion, <br />
+                            a
+                            <span class="relative inline-block italic font-headline-xl text-tertiary">
+                                mantra of joy.
+                                <svg class="absolute -bottom-2 left-0 w-full overflow-visible" fill="none" height="14"
+                                    viewbox="0 0 200 14">
+                                    <path d="M2 10 Q 90 2 196 9" stroke="#d3beeb" stroke-linecap="round"
+                                        stroke-width="3"></path>
+                                </svg>
+                            </span>
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Weddings, Garba nights, baby showers and corporate events, planned and styled in Ahmedabad by Fusion Eventt. Tell us the occasion, we bring the joy.
+                        </p>
+                                                <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                            <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container shadow-[0_0_30px_rgba(245,179,24,0.35)] transition-all font-label-ui text-label-ui font-semibold group"
+                                href="#enquiry-section">
+                                <span>Plan My Event</span>
+                                <span
+                                    class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">auto_awesome</span>
+                            </a>
+                            <button
+                                class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container/60 hover:bg-surface-container-high text-on-surface border border-outline-variant/40 transition-colors font-label-ui text-label-ui backdrop-blur-md"
+                                type="button">
+                                <span
+                                    class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </span>
+                                <span>Explore our work</span>
+                            </button>
+                        </div>
+                                                <div class="flex items-center gap-space-xs text-primary/80 pt-space-xs">
+                            <span class="font-annotation text-annotation italic text-secondary">"Tell us the occasion, we bring the joy."</span>
+                            <span
+                                class="material-symbols-outlined text-primary text-[20px] rotate-12">stylus_note</span>
+                        </div>
+                    </div>
+                                        <div class="lg:col-span-5 relative min-h-[460px] flex items-center justify-center">
+                                                <div class="absolute w-72 h-72 rounded-full bg-tertiary-container/60 blur-[80px]"></div>
+                                                <div
+                            class="relative z-20 w-64 sm:w-72 md:w-80 rounded-t-[140px] rounded-b-xl overflow-hidden shadow-[0_20px_50px_rgba(10,3,20,0.8)] -rotate-2 transform hover:rotate-0 transition-transform duration-500 bg-surface-container-high p-1.5">
+                            <div class="w-full h-80 sm:h-96 rounded-t-[136px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Opulent Indian wedding mandap adorned with cascading coral marigolds, soft blush orchids, and amber chandeliers in a heritage palace courtyard at twilight, cinematic golden hour lighting, 8k resolution, editorial fashion photography"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZKsFZyQKv7eVqnvONvGxHxkGXZPO1aPrVnNkEdF_5egHhPxCtdHGRn7nhpx5ygsPCygzonS-knrzzIYLm1uQFgUal__rnL7Zxo7m0QcNpqznIsHRY8QmRx7IY9MopAGePbB_cFQEzcgklDTPVPlUILG80IwOeFhXdK0MBvVDsrE3wV6X9RwBSetKwT4vXt0_Bm6E3629kHCemNfqk2a5cs83N95rv5N4t0k1-rY-72f460Kp03sGKIA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute bottom-3 left-4 right-4 text-xs font-label-caps uppercase tracking-wider text-primary-fixed">
+                                    Wedding Decor</div>
+                            </div>
+                        </div>
+                                                <div
+                            class="absolute -right-4 -bottom-4 z-30 w-44 sm:w-52 rounded-xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.6)] rotate-3 bg-surface-container p-1 hover:rotate-1 transition-transform">
+                            <div class="w-full h-36 rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="High-tech corporate gala auditorium filled with applause under violet stage lasers, dramatic beam lights, illuminated LED proscenium arches, and silhouetted VIP audience, wide cinematic aspect"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlWGNBva7mbTBVIHfaHO-BO0i4J5KQjiJQemOCzjxUVG36QrhBH1HPj8C95TFpAKGVqgSEF5t9ZE8NtVHaCU75xIl0WOQa2fdPlYU7rRKadyLEFj5tfhG9mge-7TU2szNOKQI8TW7UTcpNhxoPetnVBTKF-766bY7Vt6v7yFsoTF2a2FX8P39WcBXvVQ_Hi4SFUfV6sGPvFszjuKyfkIaPobkd4durhCW2PuTj8jBN0Wc7Nk7ACYPHiQ" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute bottom-2 left-2 text-[10px] font-label-ui font-semibold text-secondary-fixed">Corporate Event</span>
+                            </div>
+                        </div>
+                                                <div
+                            class="absolute -top-4 -left-4 z-30 w-36 sm:w-44 rounded-xl overflow-hidden shadow-2xl -rotate-6 bg-surface-container-highest p-1">
+                            <div class="w-full h-32 rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Festive Garba night decor with warm lights"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYe1jes9rs0J_I_ZEPGjLZndHVMFkYTHyggSepAGv52qByE67sTvOHFyaOst7SbHt4YzNyttKWDIG30UB8mHjlJLdG7J9blwLlr0p0A-WRORt-RAJarbPHO6etSgjp3BmugWQHfojRdnT9mfLCNn5Ri9stqiV0Ht8VLsBj2cdIy7RYXgLMGvN2iTnWFa9u_uUzrRIPyanWWUt4e21KCLhDFNKSbcDcxW0SB4Vyl7mBZBeRG4sx0pAjPA" />
+                                <span
+                                    class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container/90 text-tertiary text-[9px] font-bold tracking-wider">GARBA NIGHT</span>
+                            </div>
+                        </div>
+                                                <div
+                            class="absolute -top-6 right-2 z-40 w-24 h-24 rounded-full bg-secondary-container text-on-secondary-container shadow-2xl flex items-center justify-center border border-primary/40 animate-[spin_24s_linear_infinite]">
+                            <svg class="w-full h-full p-1" viewbox="0 0 100 100">
+                                <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent"
+                                    id="circlePath"></path>
+                                <text class="text-[9px] font-label-caps uppercase tracking-widest fill-current">
+                                    <textpath href="#circlePath">✦ FUSION EVENTT • MANTRA OF JOY •</textpath>
+                                </text>
+                            </svg>
+                            <span class="absolute text-primary text-base">✦</span>
+                        </div>
+                    </div>
+                </div>
+                                <div
+                    class="relative z-10 max-w-5xl mx-auto mt-space-xl pt-space-sm border-t border-primary/20 flex flex-wrap items-center justify-around gap-space-sm text-center">
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-primary font-bold">5K+</span>
+                        <span class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Instagram Family</span>
+                    </div>
+                    <span class="text-tertiary">✦</span>
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-secondary font-bold">830+</span>
+                        <span
+                            class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Moments Shared</span>
+                    </div>
+                    <span class="text-tertiary">✦</span>
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-tertiary font-bold">5</span>
+                        <span
+                            class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Signature Celebrations</span>
+                    </div>
+                    <span class="text-tertiary">✦</span>
+                    <div class="flex items-center gap-space-xs">
+                        <span class="font-headline-md text-headline-md text-primary-fixed font-bold">MICE</span>
+                        <span
+                            class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Corporate Ready</span>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-tertiary-container text-tertiary py-3 overflow-hidden shadow-inner flex select-none">
+                <div
+                    class="flex whitespace-nowrap animate-[marquee_28s_linear_infinite] gap-6 text-sm font-label-caps uppercase tracking-[0.22em] font-semibold">
+                    <span>Wedding Planning</span> <span class="text-primary-fixed">✦</span>
+                    <span>Event Planning</span> <span class="text-primary-fixed">✦</span>
+                    <span>Corporate Events</span> <span class="text-primary-fixed">✦</span>
+                    <span>Garba &amp; Navratri</span> <span class="text-primary-fixed">✦</span>
+                    <span>Birthday Parties</span> <span class="text-primary-fixed">✦</span>
+                    <span>Baby Shower</span> <span class="text-primary-fixed">✦</span>
+                    <span>Kankotri Invitations</span> <span class="text-primary-fixed">✦</span>
+                    <span>Diwali Parties</span> <span class="text-primary-fixed">✦</span>
+                    <span>Decor &amp; Styling</span> <span class="text-primary-fixed">✦</span>
+                    <span>M.I.C.E.</span> <span class="text-primary-fixed">✦</span>
+                    <span>Wedding Planning</span> <span class="text-primary-fixed">✦</span>
+                    <span>Event Planning</span> <span class="text-primary-fixed">✦</span>
+                    <span>Corporate Events</span> <span class="text-primary-fixed">✦</span>
+                    <span>Garba &amp; Navratri</span> <span class="text-primary-fixed">✦</span>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-[#F7F0E4] text-[#0B1F4D] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden">
+                                <div
+                    class="pointer-events-none absolute -top-10 right-10 text-[260px] font-bold font-headline-xl text-[#0B1F4D]/[0.03] select-none leading-none">
+                    01
+                </div>
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+                                        <div class="lg:col-span-5 relative flex justify-center">
+                                                <span
+                            class="absolute -top-12 -left-6 text-[180px] font-bold font-headline-xl text-[#0B1F4D]/[0.04] leading-none pointer-events-none select-none">FE</span>
+                        <div
+                            class="relative w-full max-w-sm rotate-[2.5deg] hover:rotate-0 transition-transform duration-500 bg-white p-3 shadow-[0_20px_45px_rgba(26,11,46,0.15)] rounded-sm">
+                            <div class="w-full h-[430px] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Fusion Eventt team at work"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78Ahd8nynNrxzkhT-AMYbbTmFJJiEXyim2F0uiVuoCSS8oog4H8s94-MUJ3EtMwRcXe4c8g4yV5hva1tlYgy-mnPLQtsi4tdFOESLhX5XH9tfjIxea4Wf4ebxXdMdzUtyQ1nnAX7tLILE_kYLIrSuuR7eeJ3YP0hSgCWdeQGBtxVWcPqQ1LPTNpXcd62DKlzxizo_Q2z-RNOETZjs4byi_Q_1lpIK9Y1DrG3HmB1N-U90rmCJUKftig" />
+                            </div>
+                                                        <div class="mt-3 px-2 flex justify-between items-end border-t border-[#0B1F4D]/10 pt-2">
+                                <div>
+                                    <p class="font-headline-md text-lg text-[#0B1F4D] font-bold">Team Fusion Eventt</p>
+                                    <p class="font-annotation text-xs text-[#0B1F4D]/70 italic">Wedding &amp; Event Planners</p>
+                                </div>
+                                <span
+                                    class="font-label-caps text-[10px] text-[#1F3F8F] tracking-widest uppercase font-semibold">Ahmedabad</span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="lg:col-span-7 flex flex-col gap-space-sm pl-0 lg:pl-space-md">
+                        <div class="inline-flex items-center gap-space-xs">
+                            <span class="w-6 h-[1.5px] bg-[#1F3F8F]"></span>
+                            <span
+                                class="font-label-caps text-xs text-[#1F3F8F] uppercase tracking-[0.2em] font-semibold">01 — Our Story</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0B1F4D] leading-tight">
+                            Making every occasion <em class="italic text-[#1F3F8F] font-headline-xl">a mantra of joy</em> for you.
+                        </h2>
+                        <p class="font-body-md text-[#0B1F4D]/80 leading-relaxed">
+                            Fusion Eventt is an Ahmedabad-based event management company that plans weddings, celebrations and corporate events with one idea at the centre: every occasion of your life should be a mantra of joy.
+                        </p>
+                        <p class="font-body-md text-[#0B1F4D]/80 leading-relaxed">
+                            Our mission is to spruce up euphoric weddings so you can treasure the moments with heaps of smiles. And we believe in relationship building, taking the bond forward so that you think of us every time you think of any event.
+                        </p>
+                                                <blockquote class="my-space-xs pl-space-md border-l-2 border-[#D49A0C] flex flex-col gap-1">
+                            <p class="font-annotation text-lg lg:text-xl italic text-[#0B1F4D] leading-snug">
+                                "We believe in relationship building, so that you think of us every time you think of any event."
+                            </p>
+                            <span class="font-annotation text-sm text-[#1F3F8F] italic">— Why Fusion</span>
+                        </blockquote>
+                                                <div class="grid grid-cols-3 gap-space-sm pt-space-xs border-t border-[#0B1F4D]/10">
+                            <div>
+                                <span class="font-headline-lg text-3xl font-bold text-[#1F3F8F]">5K+</span>
+                                <p class="font-label-caps text-[11px] text-[#0B1F4D]/60 uppercase tracking-wider">Instagram Family</p>
+                            </div>
+                            <div>
+                                <span class="font-headline-lg text-3xl font-bold text-[#1F3F8F]">830+</span>
+                                <p class="font-label-caps text-[11px] text-[#0B1F4D]/60 uppercase tracking-wider">
+                                    Moments Shared</p>
+                            </div>
+                            <div>
+                                <span class="font-headline-lg text-3xl font-bold text-[#1F3F8F]">5</span>
+                                <p class="font-label-caps text-[11px] text-[#0B1F4D]/60 uppercase tracking-wider">
+                                    Celebration Styles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+                                        <div
+                        class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-primary/20 pb-space-md">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-primary uppercase tracking-[0.25em] font-semibold">02 — What We Do</span>
+                            <h2
+                                class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-on-surface mt-1">
+                                Every celebration, <em class="italic text-tertiary font-headline-xl">one caring team.</em>
+                            </h2>
+                        </div>
+                        <p class="font-body-sm text-on-surface-variant max-w-sm">
+                            From the first idea to the last guest leaving with a smile, we plan, style and run the whole occasion.
+                        </p>
+                    </div>
+                                        <div class="flex flex-col divide-y divide-primary/15">
+                                                <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">01</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Wedding Planning</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Complete wedding planning and styling, from mandap and stage decor to sangeet, mehendi and reception, so you can enjoy every ritual.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Mandap • Stage</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                                                <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">02</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Corporate Events &amp; M.I.C.E.</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Meetings, incentives, conferences and exhibitions, plus product launches and branding events, with sharp art direction on every visual.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Meetings • Launches</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                                                <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">03</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Garba &amp; Navratri Celebrations</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Garba grounds, entrance gates, decor and lighting that turn open spaces into Navratri celebrations.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Decor • Lighting</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                                                <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">04</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Birthday &amp; Theme Parties</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Birthday parties, Diwali parties and theme celebrations, designed around the person and the mood.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Birthdays • Diwali</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                                                <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">05</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Baby Shower &amp; Baby Welcome</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Baby showers and baby welcome functions with soft, warm styling and every little detail handled.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Shower • Welcome</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                                                <div
+                            class="group py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container/40 px-space-sm -mx-space-sm rounded-lg transition-all cursor-pointer">
+                            <div class="flex items-start md:items-center gap-space-md">
+                                <span
+                                    class="font-headline-md text-2xl text-primary/50 group-hover:text-tertiary transition-colors">06</span>
+                                <div>
+                                    <h3
+                                        class="font-headline-md text-2xl text-on-surface group-hover:text-primary transition-colors">
+                                        Kankotri &amp; Invitations</h3>
+                                    <p class="font-body-sm text-on-surface-variant mt-1">Wedding cards (kankotri) and invitation design that set the tone before the first guest arrives.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+                                <span
+                                    class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-widest hidden sm:inline">Cards • Design</span>
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-tertiary-container group-hover:text-tertiary transition-all">
+                                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-secondary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden">
+                <div
+                    class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-container/60 via-secondary-container to-surface-container-lowest/80">
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                                        <div class="lg:col-span-4 flex flex-col gap-space-sm">
+                        <div class="flex items-center gap-1 text-primary">
+                            <span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+                            <span
+                                class="font-label-caps text-xs uppercase tracking-widest text-secondary-fixed ml-2">Navratri Season Special</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-none text-on-surface">
+                            Nine <em class="italic text-secondary font-headline-xl">nights</em> of<br />
+                            Garba joy.
+                        </h2>
+                        <p class="font-body-sm text-on-surface-variant">
+                            Navratri decor, Garba grounds, entrance gates and lighting, styled so open spaces feel like a festival. Society, club or corporate Garba, we handle the setup end to end.
+                        </p>
+                                                <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Garba Grounds</span>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Entrance Gates</span>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Stage &amp; Lighting</span>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container-low text-xs font-label-ui text-primary-fixed">Society Navratri</span>
+                        </div>
+                        <div class="pt-space-xs">
+                            <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container hover:bg-primary-container text-tertiary hover:text-primary transition-all font-label-ui text-label-ui font-semibold shadow-lg"
+                                href="#enquiry-section">
+                                <span>Plan My Garba Night</span>
+                                <span class="material-symbols-outlined text-[18px]">verified</span>
+                            </a>
+                        </div>
+                    </div>
+                                        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-space-md items-end">
+                                                <div
+                            class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-2.5 rounded-t-[100px] rounded-b-xl border border-primary/20 backdrop-blur-md transform sm:translate-y-4 hover:-translate-y-1 transition-transform">
+                            <div class="w-full h-72 rounded-t-[90px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Navratri decor with warm festive lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYe1jes9rs0J_I_ZEPGjLZndHVMFkYTHyggSepAGv52qByE67sTvOHFyaOst7SbHt4YzNyttKWDIG30UB8mHjlJLdG7J9blwLlr0p0A-WRORt-RAJarbPHO6etSgjp3BmugWQHfojRdnT9mfLCNn5Ri9stqiV0Ht8VLsBj2cdIy7RYXgLMGvN2iTnWFa9u_uUzrRIPyanWWUt4e21KCLhDFNKSbcDcxW0SB4Vyl7mBZBeRG4sx0pAjPA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-surface-container-high/90 text-[10px] font-label-caps uppercase tracking-wider text-secondary">Navratri Decor</span>
+                            </div>
+                            <div class="px-2 pb-1 text-center">
+                                <h4 class="font-headline-md text-lg text-on-surface">Garba Entrance</h4>
+                                <p class="font-annotation text-xs text-primary italic">Pandal &amp; Lighting</p>
+                            </div>
+                        </div>
+                                                <div
+                            class="flex flex-col gap-space-xs bg-surface-container-lowest/90 p-2.5 rounded-t-[120px] rounded-b-xl border border-secondary/40 backdrop-blur-md transform sm:-translate-y-4 shadow-[0_25px_60px_rgba(0,0,0,0.7)] hover:-translate-y-6 transition-transform">
+                            <div class="w-full h-84 rounded-t-[110px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Festival stage with colourful lights"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWrVRYhL6jBWmcPVHO3yQBJBGFJz3w183oUfVSGVEt7oeNMVzc8dpvWuDCVS4uGm57gLUP7YAOeosjxVX4St4MqcM4HFLyUeiEtNSros0u95OwTZwoWHGgQBZkbjXxz2wpVawiDqAtzlzS76DGaqadipI5rfIbVz0WIRfa_coWubYmxr2hgf6KOGH5DoA9ghTq9TWGEi-sdOPJfk4dTG-rrwzDsb61yNHFFlYDnaH5rAH8d8f9OoadOg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-tertiary-container text-[10px] font-label-caps uppercase tracking-wider text-tertiary font-bold">Festival Mood</span>
+                            </div>
+                            <div class="px-2 pb-1 text-center">
+                                <h4 class="font-headline-md text-xl text-primary font-bold">Ground Setup</h4>
+                                <p class="font-annotation text-xs text-on-surface-variant italic">Lights, Colour &amp; Crowd</p>
+                            </div>
+                        </div>
+                                                <div
+                            class="flex flex-col gap-space-xs bg-surface-container-lowest/80 p-2.5 rounded-t-[100px] rounded-b-xl border border-primary/20 backdrop-blur-md transform sm:translate-y-8 hover:translate-y-4 transition-transform">
+                            <div class="w-full h-68 rounded-t-[90px] rounded-b-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Wedding reception decor"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWNNgcoz25GTrm1Q9wYhfcDWvAkdJQ6td5TZy4A7d2skk0YYRKLfErJyGmyJSkCgasEfdJIEd__dCCWrleS96U8Zo1roLqGg9bPbIF8pLsqtGPqzmH3fB2WHEt4Oi3t8z72fkPJzaSmvHhzCVFgMW8U_bYapw32OqhFm5kyJcG5uRm_3QnTtgbFOl-vhXsoq_E76Wi4mCKcxCupea6umOztSVT7CJd1ySGwOJEAwQvpZ8mCw8TJ-nTIg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-surface-container-high/90 text-[10px] font-label-caps uppercase tracking-wider text-secondary">Wedding Season</span>
+                            </div>
+                            <div class="px-2 pb-1 text-center">
+                                <h4 class="font-headline-md text-lg text-on-surface">Stage &amp; Mandap Decor</h4>
+                                <p class="font-annotation text-xs text-primary italic">Weddings &amp; Receptions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section class="w-full bg-[#F7F0E4] text-[#0B1F4D] px-gutter md:px-margin lg:px-margin-lg py-space-xl">
+                <div class="max-w-4xl mx-auto flex flex-col items-center gap-space-md">
+                    <div class="text-center">
+                        <span
+                            class="font-label-caps text-xs text-[#1F3F8F] uppercase tracking-[0.25em] font-semibold">Festive Season Pass</span>
+                        <h2 class="font-headline-xl text-3xl sm:text-4xl font-semibold text-[#0B1F4D]">
+                            Festive Season <em class="italic text-[#D49A0C] font-headline-xl">Special</em>.
+                        </h2>
+                    </div>
+                                        <div
+                        class="w-full relative bg-white rounded-2xl shadow-[0_20px_50px_rgba(26,11,46,0.12)] border border-[#0B1F4D]/10 flex flex-col md:flex-row overflow-hidden">
+                                                <div
+                            class="md:w-5/12 bg-primary-container text-on-surface p-space-md flex flex-col justify-between relative border-b md:border-b-0 md:border-r border-dashed border-primary/40">
+                                                        <div
+                                class="hidden md:block absolute -right-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#F7F0E4]">
+                            </div>
+                            <div class="flex flex-col gap-space-xs">
+                                <div
+                                    class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded bg-tertiary-container text-tertiary text-[10px] font-label-caps tracking-widest uppercase">
+                                    Now Booking
+                                </div>
+                                <h3 class="font-headline-md text-2xl text-primary font-bold mt-2">DIWALI PARTIES &amp; CELEBRATIONS</h3>
+                                <p class="font-annotation text-sm text-secondary-fixed italic">Light up your festive season</p>
+                            </div>
+                            <div
+                                class="mt-space-md pt-space-xs border-t border-primary/20 flex flex-col gap-1 font-body-sm text-xs text-on-surface-variant">
+                                <p><span class="text-primary font-medium">SEASON:</span> 2026 festive season</p>
+                                <p><span class="text-primary font-medium">VENUE:</span> Your home, society or venue</p>
+                                <p><span class="text-primary font-medium">WE HANDLE:</span> Decor • Lighting • Setup</p>
+                            </div>
+                        </div>
+                                                <div
+                            class="md:w-7/12 p-space-md flex flex-col justify-between bg-white text-[#0B1F4D] relative">
+                                                        <div
+                                class="hidden md:block absolute -left-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#F7F0E4]">
+                            </div>
+                            <div class="flex flex-col gap-space-xs">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="font-label-caps text-[11px] uppercase tracking-widest text-[#1F3F8F] font-bold">Planned By Fusion Eventt</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-[#F1D9E4] text-[#D49A0C] text-xs font-semibold">FESTIVE PASS</span>
+                                </div>
+                                <p class="font-body-sm text-xs text-[#0B1F4D]/75 leading-relaxed mt-1">
+                                    Diwali get-togethers, society celebrations and festive corporate parties, planned end to end by Fusion Eventt, from decor and lighting to every last detail on the day.
+                                </p>
+                            </div>
+                                                        <div
+                                class="mt-space-md pt-space-xs border-t border-[#0B1F4D]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+                                <div class="flex flex-col">
+                                                                        <svg class="h-8 w-36 text-[#0B1F4D]/80" fill="currentColor" viewbox="0 0 144 32">
+                                        <rect height="32" width="3" x="0" y="0"></rect>
+                                        <rect height="32" width="1" x="5" y="0"></rect>
+                                        <rect height="32" width="4" x="8" y="0"></rect>
+                                        <rect height="32" width="2" x="14" y="0"></rect>
+                                        <rect height="32" width="1" x="18" y="0"></rect>
+                                        <rect height="32" width="5" x="22" y="0"></rect>
+                                        <rect height="32" width="2" x="29" y="0"></rect>
+                                        <rect height="32" width="1" x="33" y="0"></rect>
+                                        <rect height="32" width="4" x="36" y="0"></rect>
+                                        <rect height="32" width="3" x="42" y="0"></rect>
+                                        <rect height="32" width="1" x="48" y="0"></rect>
+                                        <rect height="32" width="6" x="52" y="0"></rect>
+                                        <rect height="32" width="2" x="60" y="0"></rect>
+                                        <rect height="32" width="3" x="65" y="0"></rect>
+                                        <rect height="32" width="1" x="71" y="0"></rect>
+                                        <rect height="32" width="5" x="74" y="0"></rect>
+                                        <rect height="32" width="2" x="82" y="0"></rect>
+                                        <rect height="32" width="4" x="86" y="0"></rect>
+                                        <rect height="32" width="1" x="93" y="0"></rect>
+                                        <rect height="32" width="3" x="96" y="0"></rect>
+                                        <rect height="32" width="5" x="101" y="0"></rect>
+                                        <rect height="32" width="2" x="108" y="0"></rect>
+                                        <rect height="32" width="1" x="112" y="0"></rect>
+                                        <rect height="32" width="4" x="115" y="0"></rect>
+                                        <rect height="32" width="2" x="122" y="0"></rect>
+                                        <rect height="32" width="6" x="126" y="0"></rect>
+                                        <rect height="32" width="2" x="135" y="0"></rect>
+                                        <rect height="32" width="4" x="140" y="0"></rect>
+                                    </svg>
+                                    <span
+                                        class="font-label-caps text-[9px] tracking-[0.2em] text-[#0B1F4D]/60 mt-0.5">#FE-2026-DIWALI</span>
+                                </div>
+                                <a class="px-space-md py-space-xs rounded-full bg-[#0B1F4D] text-white hover:bg-[#1F3F8F] transition-colors font-label-ui text-xs font-semibold"
+                                    href="#enquiry-section">
+                                    Book Your Festive Date
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+                                        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-primary uppercase tracking-[0.25em] font-semibold">03 — Our Work</span>
+                            <h2 class="font-headline-xl text-3xl sm:text-5xl font-semibold text-on-surface mt-1">
+                                Moments we <em class="italic text-tertiary font-headline-xl">lit up</em>.
+                            </h2>
+                        </div>
+                                                <div class="flex flex-wrap gap-2">
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-tertiary-container text-tertiary font-label-ui text-xs font-semibold shadow-sm">All Events</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Weddings</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Corporate</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Garba &amp; Navratri</button>
+                            <button
+                                class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-ui text-xs transition-colors">Baby Shower &amp; Birthday</button>
+                        </div>
+                    </div>
+                                        <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+                                                <div
+                            class="md:col-span-7 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[380px] p-2">
+                            <div class="w-full h-full min-h-[380px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Grand royal palace wedding reception at night in India, monumental carved stone arches bathed in warm gold and magenta floodlights, water reflection fountain, luxury floral decor with thousands of roses"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWNNgcoz25GTrm1Q9wYhfcDWvAkdJQ6td5TZy4A7d2skk0YYRKLfErJyGmyJSkCgasEfdJIEd__dCCWrleS96U8Zo1roLqGg9bPbIF8pLsqtGPqzmH3fB2WHEt4Oi3t8z72fkPJzaSmvHhzCVFgMW8U_bYapw32OqhFm5kyJcG5uRm_3QnTtgbFOl-vhXsoq_E76Wi4mCKcxCupea6umOztSVT7CJd1ySGwOJEAwQvpZ8mCw8TJ-nTIg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                                                <div
+                                    class="absolute top-4 left-4 rotate-[-3deg] bg-[#F7F0E4] text-[#0B1F4D] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Wedding Celebration
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-label-caps text-primary-fixed">
+                                    <span>Mandap &amp; Stage Styling</span>
+                                    <span class="text-tertiary font-bold">Weddings</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div
+                            class="md:col-span-5 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[380px] p-2">
+                            <div class="w-full h-full min-h-[380px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Futuristic corporate summit arena with curved giant 8K LED screen displaying high-end tech visualizations, illuminated runway, executive speakers in silhouette, modern conference lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuByO_U4lCwQvYZpwUEQCjhZZidGcsFkw4KZT29mEpzWWKl_SarkLJF-jB2MbGfk4ZoDnFkm3yvQB7-zZc3eyxF1Y166GAJFGSYzEFNxMsvWrvOkMzYncVLBE0FsDbCIxwagRI4IBx9oOYLL8JzpMPDDpc1HzZiJ7ubJ3CWqA0Cy3yX8TeE7nwpk9nNJ0uL07OzNi9KS3YWIccL6ORcJ2lybnkU4X6aJAzXgfacF5dG2gq7MxDGzKiSaHA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 rotate-[2deg] bg-[#F1D9E4] text-[#1F3F8F] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Corporate Event
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-label-caps text-secondary-fixed">
+                                    <span>M.I.C.E. &amp; Launches</span>
+                                    <span class="text-secondary font-bold">Corporate</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div
+                            class="md:col-span-4 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[340px] p-2">
+                            <div class="w-full h-full min-h-[340px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Bohemian luxury destination wedding on a secluded coastal beach at golden sunset, driftwood canopy wrapped in pampas grass and white lilies, gentle ocean tide, fairy lights strung overhead"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymyQeIYraFATrOulxorY2pc1BsNFDaECrGcGPcf5D4DGfXIGFpnqfR0pNQUONlfYBVPkjIIOI6u1Z_kDTHSjZwpMEdbVhH3dTMVdEY_ebxcZdtvC3tRsozjQvoE5URE0agi_F4SNyA2Zr-4Ydq8SIO0BTBC8hwE-kl0T4rYc7_Ra5uH_oS2fQbLA5hM7CpjQdJHfHADrZO7sI_SE7LvvffTPFFfMU31OeZdem8WLqPAwatP6EIfLeSA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 rotate-[-2deg] bg-[#F7F0E4] text-[#0B1F4D] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Outdoor Celebration
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 text-xs font-label-caps text-primary-fixed">
+                                    <span>Open-air Styling</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div
+                            class="md:col-span-4 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[340px] p-2">
+                            <div class="w-full h-full min-h-[340px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Massive live stage concert at an arena awards night, sparks and cold pyrotechnics raining from the overhead trusses, laser beams cutting through ambient haze, silhouetted performer with arms raised"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWrVRYhL6jBWmcPVHO3yQBJBGFJz3w183oUfVSGVEt7oeNMVzc8dpvWuDCVS4uGm57gLUP7YAOeosjxVX4St4MqcM4HFLyUeiEtNSros0u95OwTZwoWHGgQBZkbjXxz2wpVawiDqAtzlzS76DGaqadipI5rfIbVz0WIRfa_coWubYmxr2hgf6KOGH5DoA9ghTq9TWGEi-sdOPJfk4dTG-rrwzDsb61yNHFFlYDnaH5rAH8d8f9OoadOg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 rotate-[3deg] bg-tertiary-container text-tertiary px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Garba &amp; Navratri Night
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 text-xs font-label-caps text-secondary-fixed">
+                                    <span>Stage, Lights &amp; Decor</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div
+                            class="md:col-span-4 group relative bg-surface-container-high rounded-xl overflow-hidden shadow-2xl min-h-[340px] p-2">
+                            <div class="w-full h-full min-h-[340px] rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Editorial indoor luxury reception dining hall with ceiling dripping in cascading crimson wisteria and emerald glass chandeliers, dark velvet tablecloths, glowing taper candles, bespoke tablescape"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYe1jes9rs0J_I_ZEPGjLZndHVMFkYTHyggSepAGv52qByE67sTvOHFyaOst7SbHt4YzNyttKWDIG30UB8mHjlJLdG7J9blwLlr0p0A-WRORt-RAJarbPHO6etSgjp3BmugWQHfojRdnT9mfLCNn5Ri9stqiV0Ht8VLsBj2cdIy7RYXgLMGvN2iTnWFa9u_uUzrRIPyanWWUt4e21KCLhDFNKSbcDcxW0SB4Vyl7mBZBeRG4sx0pAjPA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent">
+                                </div>
+                                <div
+                                    class="absolute top-4 left-4 rotate-[-1deg] bg-[#F7F0E4] text-[#0B1F4D] px-2.5 py-1 shadow-md font-annotation text-xs italic font-bold">
+                                    Festive Party Decor
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 right-4 text-xs font-label-caps text-primary-fixed">
+                                    <span>Diwali &amp; Theme Parties</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="flex justify-center pt-space-xs">
+                        <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-surface-container-high hover:bg-secondary-container text-primary hover:text-on-secondary-container border border-primary/20 transition-all font-label-ui text-label-ui"
+                            href="#enquiry-section">
+                            <span>See More on Instagram</span>
+                            <span class="material-symbols-outlined text-[18px]">photo_library</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-[#F7F0E4] text-[#0B1F4D] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                                        <div class="lg:col-span-5 flex flex-col gap-space-sm">
+                        <div class="inline-flex items-center gap-space-xs">
+                            <span class="w-6 h-[1.5px] bg-[#D49A0C]"></span>
+                            <span
+                                class="font-label-caps text-xs text-[#D49A0C] uppercase tracking-[0.2em] font-semibold">04 — Why Fusion</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0B1F4D] leading-tight">
+                            Planners who <em class="italic text-[#1F3F8F] font-headline-xl">stay</em> in your life.
+                        </h2>
+                        <p class="font-body-md text-[#0B1F4D]/80 leading-relaxed">
+                            We believe in relationship building. We take the bond forward so that you think of us every time you think of any event, and our vision is to make every occasion of your life a mantra of joy.
+                        </p>
+                                                <div class="pt-space-xs border-t border-[#0B1F4D]/10 flex flex-col gap-2">
+                            <span
+                                class="font-label-caps text-[10px] text-[#0B1F4D]/60 uppercase tracking-widest">What we stand for:</span>
+                            <div
+                                class="flex flex-wrap items-center gap-space-md text-[#0B1F4D]/70 font-label-caps text-xs tracking-wider font-semibold">
+                                <span>RELATIONSHIPS</span>
+                                <span class="text-[#D49A0C]">✦</span>
+                                <span>ART DIRECTION</span>
+                                <span class="text-[#D49A0C]">✦</span>
+                                <span>CUSTOMISED EVENTS</span>
+                                <span class="text-[#D49A0C]">✦</span>
+                                <span>CLIENT SATISFACTION</span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md items-center">
+                                                <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_15px_35px_rgba(26,11,46,0.08)] flex flex-col items-center text-center gap-2 relative">
+                                                        <svg class="w-16 h-16 text-[#D6A94A]" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewbox="0 0 64 64">
+                                <path d="M12 48 C 8 32, 16 16, 32 8 C 28 20, 24 36, 12 48 Z"></path>
+                                <path d="M52 48 C 56 32, 48 16, 32 8 C 36 20, 40 36, 52 48 Z"></path>
+                                <circle cx="32" cy="32" fill="#D6A94A" fill-opacity="0.15" r="6"></circle>
+                            </svg>
+                            <span class="font-headline-md text-xl font-bold text-[#0B1F4D]">Our Vision</span>
+                            <span
+                                class="font-label-caps text-xs text-[#D49A0C] tracking-widest font-semibold uppercase">Mantra of Joy</span>
+                            <p class="font-body-sm text-xs text-[#0B1F4D]/70">To make every occasion of your life a mantra of joy.</p>
+                        </div>
+                                                <div class="relative flex flex-col items-center">
+                            <div
+                                class="w-full bg-white p-3 shadow-[0_18px_40px_rgba(26,11,46,0.12)] rotate-2 hover:rotate-0 transition-transform duration-500 rounded-sm">
+                                <div class="w-full h-52 overflow-hidden rounded-sm relative">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Floral decor being prepared by the decor team"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUttVnjU2VQZqJmBfAOZLCRE3dafGnl3yXziUI3agYEd2S1arv0xSCnd7h-7wvWnofDOLlO2mDDUEG-IwEmb7kJvowY29ZeKWryTBW7cU1bGy8WapKeRPr_n9SNJKeusPFobtFsEMct0X_8NO7fxnDmdP23LEgsj0edGGw-Fm-qzYDDVdsSSTuvC81JVE9d5giRVkAjCeOG8toLZ6Icf0-ib2OsTYs7wY89NamjFu5z3ioQLO252ZC3g" />
+                                </div>
+                                <div class="mt-2 text-center">
+                                    <p class="font-annotation text-sm text-[#0B1F4D] italic">"Every wedding, a moment to treasure."</p>
+                                    <p
+                                        class="font-label-caps text-[10px] text-[#1F3F8F] font-bold tracking-widest uppercase mt-0.5">
+                                        Our Mission: Euphoric Weddings</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-secondary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden">
+                <div class="max-w-6xl mx-auto flex flex-col gap-space-lg relative z-10">
+                    <div class="text-center max-w-xl mx-auto">
+                        <span
+                            class="font-label-caps text-xs text-secondary-fixed uppercase tracking-[0.25em] font-semibold">05 — How We Work</span>
+                        <h2 class="font-headline-xl text-3xl sm:text-5xl font-semibold text-on-surface mt-1">
+                            From first call to <em class="italic text-secondary font-headline-xl">happy memories</em>.
+                        </h2>
+                        <p class="font-annotation text-annotation italic text-primary-fixed-dim mt-2">
+                            "It starts with one conversation and ends with smiles."
+                        </p>
+                    </div>
+                                        <div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative pt-space-md">
+                                                <div class="hidden md:block absolute top-12 left-10 right-10 h-0.5 bg-primary/30 z-0"></div>
+                                                <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                01
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">Tell Us Your Occasion</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">A friendly chat about your idea, guest count, date and budget, so we understand what joy means for you.</p>
+                        </div>
+                                                <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                02
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">Concept &amp; Design</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Theme, decor ideas, colour palette and layout, shared with you before anything is finalised.</p>
+                        </div>
+                                                <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                03
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">Vendors &amp; Setup Locked</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Decor, lighting, caterers, artists and every vendor from our network, confirmed at competitive rates.</p>
+                        </div>
+                                                <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary-container text-primary border-2 border-primary/50 flex items-center justify-center font-headline-md text-xl font-bold shadow-lg">
+                                04
+                            </div>
+                            <h4 class="font-headline-md text-lg text-on-surface mt-1">We Run The Day</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Our team handles every cue on the day while you enjoy the occasion with your family and guests.</p>
+                        </div>
+                                                <div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+                            <div
+                                class="w-14 h-14 rounded-full bg-tertiary-container text-tertiary border-2 border-tertiary/60 flex items-center justify-center font-headline-md text-xl font-bold shadow-xl">
+                                05
+                            </div>
+                            <h4 class="font-headline-md text-lg text-primary mt-1">Smiles &amp; Memories</h4>
+                            <p class="font-body-sm text-xs text-on-surface-variant">Photos, feedback and a thank-you, and a bond that carries on to your next occasion.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-[#F7F0E4] text-[#0B1F4D] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm border-b border-[#0B1F4D]/10 pb-space-sm">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-[#D49A0C] uppercase tracking-[0.2em] font-semibold">06 — Behind the Scenes</span>
+                            <h2 class="font-headline-xl text-3xl sm:text-4xl font-semibold text-[#0B1F4D]">
+                                The people <em class="italic text-[#1F3F8F] font-headline-xl">behind</em> the joy.
+                            </h2>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-annotation text-sm text-[#1F3F8F] italic">Every great occasion has a team working quietly behind it.</span>
+                            <a class="font-label-caps text-xs text-[#D49A0C] hover:underline uppercase font-bold"
+                                href="#enquiry-section">Talk To Us →</a>
+                        </div>
+                    </div>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+                                                <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[-1.5deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Technical stage crew in black Fusion Eventt t-shirts adjusting heavy steel truss lighting and purple spotlight beam at 3 AM in a vast empty ballroom, candid documentary shot"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMNoJ-HEg_lQ8e2qlRhsXrU2c45X0Rvf2Te583V1MpNcPDoeqeuhZF3YRCVmUjxqBkoO9-ciKxcZyccsIZJ_WH7GSv0-RqYjqdn1l92TglTNLTLPcz0_ZpkVJP4T39fMxt_vRfeF4X1H3Fsy3_4z1_feD3tlyfzVUpqnw3OWAOxvYFJTGaXAnxXorCEmQgqGdeSxc5l3vVhlFFUzWhfzqYoj4ke6zta9xw78mZE3OxqrmnuMmx4xsjkw" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#0B1F4D] italic">"Setup begins long before the guests arrive."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#1F3F8F] tracking-wider uppercase font-semibold">Setup Crew</span>
+                            </div>
+                        </div>
+                                                <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[1.5deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Indian floral artisan masterfully stringing vibrant orange and yellow marigold garlands by hand across an intricate wooden mandap frame, beautiful morning sunlight, authentic focus"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUttVnjU2VQZqJmBfAOZLCRE3dafGnl3yXziUI3agYEd2S1arv0xSCnd7h-7wvWnofDOLlO2mDDUEG-IwEmb7kJvowY29ZeKWryTBW7cU1bGy8WapKeRPr_n9SNJKeusPFobtFsEMct0X_8NO7fxnDmdP23LEgsj0edGGw-Fm-qzYDDVdsSSTuvC81JVE9d5giRVkAjCeOG8toLZ6Icf0-ib2OsTYs7wY89NamjFu5z3ioQLO252ZC3g" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#0B1F4D] italic">"Every garland and flower, placed with care."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#1F3F8F] tracking-wider uppercase font-semibold">Decor Team</span>
+                            </div>
+                        </div>
+                                                <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[-2deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Backstage production manager talking into a radio headset with clipboard in hand while a celebrity silhouette prepares to step onto stage stairs, dramatic blue backstage lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrwjQKhSAd8yQ3SrshWIUsDfezOiRTYLVH7J7nxmyENfUgJosT7ElGDsxxjei0I_xGPnWVzpyn_hMCRl3Urc_uhrYpxenFECLXVRm2v0w7tz7fjxvFTaGLdUoGqiCuz_LrNpOPqN7tJ8v8OL96V9K7VyFcllNFgA-OP-Owv8A-qr8YLPMg-l_NKuZMO_iNrUbFmKDXvIVKvKi7bpBfDHBSvMk9gkIxqAJwLqDu54NNAsU5gDG-gG6DDw" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#0B1F4D] italic">"On the day, we are always one step ahead."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#1F3F8F] tracking-wider uppercase font-semibold">Event Managers</span>
+                            </div>
+                        </div>
+                                                <div
+                            class="bg-white p-2.5 rounded shadow-[0_12px_28px_rgba(26,11,46,0.08)] rotate-[2deg] hover:rotate-0 transition-transform">
+                            <div class="w-full h-56 overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Creative design team reviewing architectural blueprints and fabric swatches on a rustic wooden studio desk with steaming cups of Indian chai, cozy atmospheric lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4bxH2NYao1QjKbPGWZ2UJcVOW42Bz4HJ_0Ux3fCdBauusPtFiMVC1DWGNXSfKBa3MvPafZ1opEY9Yg8AhdO7bg2_b1dl8yGR_kyYD3GTxsLgQf8HPxFnC2qqYx_x_N2D4MRXAOpRlX1NhWOGaheDbrJEbWLvaJQShRtU5-9tRNS1CT1TFXcFzMU-vtbimSrf-fB5oOs3MdwfXdT11tsHCLL_hdPxQn33Yod-hbsEqr9OzjyQMJcuNpw" />
+                            </div>
+                            <div class="pt-2 px-1">
+                                <p class="font-annotation text-xs text-[#0B1F4D] italic">"Every event starts as a sketch and a conversation."</p>
+                                <span
+                                    class="font-label-caps text-[9px] text-[#1F3F8F] tracking-wider uppercase font-semibold">Design Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-[#F1D9E4] text-[#0B1F4D] px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+                    <div class="text-center max-w-lg mx-auto">
+                        <span
+                            class="font-label-caps text-xs text-[#D49A0C] uppercase tracking-[0.25em] font-semibold">07 — Client Words</span>
+                        <h2 class="font-headline-xl text-3xl sm:text-4xl font-semibold text-[#0B1F4D] mt-1">
+                            Words from <em class="italic text-[#1F3F8F] font-headline-xl">our families</em>.
+                        </h2>
+                        <p class="font-annotation text-sm text-[#0B1F4D]/70 italic mt-1">Kind words from the families and teams we have celebrated with.</p>
+                    </div>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                                                <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_14px_35px_rgba(26,11,46,0.06)] relative border border-[#0B1F4D]/5 rotate-[-1deg] hover:rotate-0 transition-transform">
+                                                        <div
+                                class="w-16 h-4 bg-[#D6A94A]/30 absolute -top-2 left-1/2 -translate-x-1/2 rotate-1 backdrop-blur-xs">
+                            </div>
+                            <div class="flex items-center gap-1 text-[#D6A94A] mb-space-xs text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="font-body-md text-sm text-[#0B1F4D]/85 leading-relaxed">
+                                "[Sample: replace with a real client testimonial about their wedding with Fusion Eventt.]"
+                            </p>
+                            <div class="mt-space-md pt-space-xs border-t border-[#0B1F4D]/10">
+                                <p class="font-headline-md text-sm font-bold text-[#1F3F8F]">Client Name
+                                </p>
+                                <p class="font-annotation text-xs text-[#0B1F4D]/60 italic">Wedding Celebration</p>
+                            </div>
+                        </div>
+                                                <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_14px_35px_rgba(26,11,46,0.06)] relative border border-[#0B1F4D]/5 rotate-[1.5deg] hover:rotate-0 transition-transform">
+                                                        <div
+                                class="w-16 h-4 bg-[#D49A0C]/20 absolute -top-2 left-1/2 -translate-x-1/2 -rotate-1 backdrop-blur-xs">
+                            </div>
+                            <div class="flex items-center gap-1 text-[#D6A94A] mb-space-xs text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="font-body-md text-sm text-[#0B1F4D]/85 leading-relaxed">
+                                "[Sample: replace with a real testimonial from a corporate client.]"
+                            </p>
+                            <div class="mt-space-md pt-space-xs border-t border-[#0B1F4D]/10">
+                                <p class="font-headline-md text-sm font-bold text-[#1F3F8F]">Client Name</p>
+                                <p class="font-annotation text-xs text-[#0B1F4D]/60 italic">Corporate Event</p>
+                            </div>
+                        </div>
+                                                <div
+                            class="bg-white p-space-md rounded-xl shadow-[0_14px_35px_rgba(26,11,46,0.06)] relative border border-[#0B1F4D]/5 rotate-[-1deg] hover:rotate-0 transition-transform">
+                                                        <div
+                                class="w-16 h-4 bg-[#D6A94A]/30 absolute -top-2 left-1/2 -translate-x-1/2 rotate-2 backdrop-blur-xs">
+                            </div>
+                            <div class="flex items-center gap-1 text-[#D6A94A] mb-space-xs text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="font-body-md text-sm text-[#0B1F4D]/85 leading-relaxed">
+                                "[Sample: replace with a real testimonial about a Garba, baby shower or birthday.]"
+                            </p>
+                            <div class="mt-space-md pt-space-xs border-t border-[#0B1F4D]/10">
+                                <p class="font-headline-md text-sm font-bold text-[#1F3F8F]">Client Name
+                                </p>
+                                <p class="font-annotation text-xs text-[#0B1F4D]/60 italic">Celebration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative">
+                <div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm border-b border-primary/20 pb-space-sm">
+                        <div>
+                            <span
+                                class="font-label-caps text-xs text-secondary-fixed uppercase tracking-[0.2em] font-semibold">Live on Instagram</span>
+                            <h3 class="font-headline-md text-2xl text-on-surface mt-0.5">
+                                Follow the joy <span class="text-tertiary">@fusioneventaa</span>
+                            </h3>
+                            <p class="font-annotation text-xs text-on-surface-variant italic">5,000+ members in our celebration family</p>
+                        </div>
+                        <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container transition-all font-label-ui text-xs font-semibold self-start sm:self-auto"
+                            href="https://www.instagram.com/fusioneventaa/" target="_blank" rel="noopener noreferrer" target="_blank">
+                            <span>Follow On Instagram</span>
+                            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                        </a>
+                    </div>
+                                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Close up of a royal bride walking down the aisle under a canopy of fresh tuberoses and jasmine, soft golden candlelight, emotional wedding moment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhFFEhBGm6MCrf4PS5RHpgSnl-JbWudaoJxnZVFJrQZ7CoOmacVFZr57QGFKXOlsejDWoEpR3bGzEwSHwF4itHHsOSZoK4a9nhteIBvb06bjzO396bsY26M-vqPvbF4BuFh-fGHum9reesBj0YzIpdP1Gtj9ZTiaKANkoI91iAPm4gCWqFlp-6piU0nGdeR4Yk4CIaBK57U6liDSj3tbXV1rrUzaHhFJzVpq3qsz1LIcufVu3-oWYq-A" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Concert stage laser lights piercing through purple atmospheric fog, crowd waving hands in celebration, energetic musical night"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGMWuDm9ABKlEC3elspZ82cxFf9hn8RknS9VTMqDG01eIrnMIggYwYbbvCE9mrMbc-S0MC2fg4vgdm9pP_9sNgefM23AD9IQ_FQrbRQbFMc0euBILh0ADXFOwyq7GZSXicCJKQzFnPeDzaV-rkaBYwzbrIByT8Z2t2-wRrpaD1Vdd6yKwy7cJ8-GkKcfTmXyJCMJyKnPb6-FM4qKkJ07iCzp2ImNatl9yEgGqaiyfkdJXtf_ZFixCwqg" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Architectural centerpiece of hand-blown glass candleholders reflecting warm flames over royal purple silk tablecloths at a gala dinner"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiGx6Sv2csEOm3B9bY0htJ8lsX4XGsa_CMfMk6wLFEyeYL2qNEFM0OV0_UzQ5N5g7ezjN_I1F4HZKc7Auo1iv8hgu-dJYaN1PledNdl_6ZilW79xZvunfhMHsJSMXSiZDTCKt0m2yABsXP8QTgHcbXGPsSumIZqt1sjrFUILXhe5dm7OsgDrU8RO8Vd2lf31Vn4vYQR-fv5sPi38d1x_GqSZhPFuQt4Uj-LK29rGAVEyhXMp_rsdOvZQ" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Wedding stage decor"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZKsFZyQKv7eVqnvONvGxHxkGXZPO1aPrVnNkEdF_5egHhPxCtdHGRn7nhpx5ygsPCygzonS-knrzzIYLm1uQFgUal__rnL7Zxo7m0QcNpqznIsHRY8QmRx7IY9MopAGePbB_cFQEzcgklDTPVPlUILG80IwOeFhXdK0MBvVDsrE3wV6X9RwBSetKwT4vXt0_Bm6E3629kHCemNfqk2a5cs83N95rv5N4t0k1-rY-72f460Kp03sGKIA" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Sunset cocktail gathering on a luxury yacht deck off the coast of coastal, guests toasting with champagne glasses against vivid orange skies"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb7ppJCc784mjXSjuuGNUWBu0548_xbuVCE5G6qeechvn-7suJePgJ0TRg2tSW1ESZMcKgKjwGBEOEiabgGCdG6S3h4Cg-LPAmhUwCllgBQxvG5iTEoWobvKPnSTaB9KOLFO1JGgQwgKlJGivVtir2woBZBP2l6foSnqJP6tHmrHwzOF8HMNPUZ8sGNpbLk8rjeATpeabLUJLVFV5OixxS2DxOVYznlCMd_SMtivHUr4eaNj42ZFrNtg" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden relative group bg-surface-container">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Fusion Eventt crew team huddle backstage with walkie-talkies and headsets, smiles and shared confidence before curtain rises"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78Ahd8nynNrxzkhT-AMYbbTmFJJiEXyim2F0uiVuoCSS8oog4H8s94-MUJ3EtMwRcXe4c8g4yV5hva1tlYgy-mnPLQtsi4tdFOESLhX5XH9tfjIxea4Wf4ebxXdMdzUtyQ1nnAX7tLILE_kYLIrSuuR7eeJ3YP0hSgCWdeQGBtxVWcPqQ1LPTNpXcd62DKlzxizo_Q2z-RNOETZjs4byi_Q_1lpIK9Y1DrG3HmB1N-U90rmCJUKftig" />
+                            <div
+                                class="absolute inset-0 bg-primary-container/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                        <section
+                class="w-full bg-gradient-to-br from-tertiary-container via-secondary-container to-primary-container text-on-surface px-gutter md:px-margin lg:px-margin-lg py-space-xl relative overflow-hidden"
+                id="enquiry-section">
+                <div
+                    class="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-primary/20 blur-[120px]">
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+                                        <div class="lg:col-span-5 flex flex-col gap-space-md">
+                        <div class="inline-flex items-center gap-space-xs">
+                            <span class="text-tertiary">✦</span>
+                            <span
+                                class="font-label-caps text-xs text-primary-fixed uppercase tracking-[0.25em] font-semibold">Talk To Us</span>
+                        </div>
+                        <h2
+                            class="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-on-surface">
+                            Got an occasion?<br />
+                            <em class="italic text-tertiary font-headline-xl">Let's fill it with joy.</em>
+                        </h2>
+                        <p class="font-body-md text-on-surface-variant max-w-md">
+                            Whether it is a wedding, a Garba night, a baby shower, a birthday or a corporate event, tell us your idea and our team will get back to you.
+                        </p>
+                                                <div class="flex flex-col gap-space-sm pt-space-xs">
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">call</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">
+                                        Call Us</p>
+                                    <p class="font-headline-md text-lg text-on-surface">+91 73831 11466
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">chat</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">
+                                        WhatsApp Us</p>
+                                    <p class="font-body-md text-sm text-secondary-fixed">Quick replies on dates &amp; ideas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">
+                                        Email</p>
+                                    <p class="font-body-md text-sm text-on-surface">shyamal@fusionevent.in</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-space-xs text-xs font-label-caps uppercase tracking-widest text-primary/70">
+                            Studio: Satellite, Ahmedabad, Gujarat 380015
+                        </div>
+                    </div>
+                                        <div class="lg:col-span-7">
+                        <div
+                            class="bg-[#F7F0E4] text-[#0B1F4D] p-space-md sm:p-space-lg rounded-2xl shadow-[0_25px_60px_rgba(10,3,20,0.45)] relative">
+                            <div class="flex flex-col gap-1 mb-space-md border-b border-[#0B1F4D]/10 pb-space-xs">
+                                <span
+                                    class="font-label-caps text-[11px] text-[#1F3F8F] tracking-widest uppercase font-semibold">Enquiry Form</span>
+                                <h3 class="font-headline-md text-2xl font-bold text-[#0B1F4D]">Plan Your Occasion</h3>
+                            </div>
+                                                        <form class="flex flex-col gap-space-md"
+                                onsubmit="event.preventDefault(); alert('Thank you! Our Creative Director will connect within 4 hours.');">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#0B1F4D]/70 tracking-widest uppercase font-semibold">Full
+                                            Name *</label>
+                                        <input
+                                            class="w-full bg-transparent border-b border-[#0B1F4D]/30 pb-2 text-sm text-[#0B1F4D] focus:outline-none focus:border-[#D49A0C] transition-colors"
+                                            placeholder="e.g., Riya Patel" required="" type="text" />
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#0B1F4D]/70 tracking-widest uppercase font-semibold">Phone
+                                            Number / WhatsApp *</label>
+                                        <input
+                                            class="w-full bg-transparent border-b border-[#0B1F4D]/30 pb-2 text-sm text-[#0B1F4D] focus:outline-none focus:border-[#D49A0C] transition-colors"
+                                            placeholder="+91 98..." required="" type="tel" />
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#0B1F4D]/70 tracking-widest uppercase font-semibold">Type of Event *</label>
+                                        <select
+                                            class="w-full bg-transparent border-b border-[#0B1F4D]/30 pb-2 text-sm text-[#0B1F4D] focus:outline-none focus:border-[#D49A0C] transition-colors">
+                                            <option value="wedding">Wedding Planning</option>
+                                            <option value="corporate">Corporate Event / M.I.C.E.</option>
+                                            <option value="garba">Garba / Navratri</option>
+                                            <option value="party">Birthday / Diwali Party</option>
+                                            <option value="baby">Baby Shower / Baby Welcome</option>
+                                            <option value="other">Kankotri / Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-caps text-[10px] text-[#0B1F4D]/70 tracking-widest uppercase font-semibold">Estimated
+                                            Date &amp; Guests</label>
+                                        <input
+                                            class="w-full bg-transparent border-b border-[#0B1F4D]/30 pb-2 text-sm text-[#0B1F4D] focus:outline-none focus:border-[#D49A0C] transition-colors"
+                                            placeholder="e.g., Dec 2026 • 300 Guests" type="text" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label
+                                        class="font-label-caps text-[10px] text-[#0B1F4D]/70 tracking-widest uppercase font-semibold">City / Venue</label>
+                                    <input
+                                        class="w-full bg-transparent border-b border-[#0B1F4D]/30 pb-2 text-sm text-[#0B1F4D] focus:outline-none focus:border-[#D49A0C] transition-colors"
+                                        placeholder="e.g., Ahmedabad, Gandhinagar, Surat" type="text" />
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label
+                                        class="font-label-caps text-[10px] text-[#0B1F4D]/70 tracking-widest uppercase font-semibold">Your Ideas / Notes</label>
+                                    <textarea
+                                        class="w-full bg-transparent border-b border-[#0B1F4D]/30 pb-2 text-sm text-[#0B1F4D] focus:outline-none focus:border-[#D49A0C] transition-colors resize-none"
+                                        placeholder="Tell us about your occasion..."
+                                        rows="2"></textarea>
+                                </div>
+                                <div class="pt-space-xs flex items-center justify-between">
+                                    <span class="font-annotation text-xs text-[#0B1F4D]/60 italic">We will get back to you soon.</span>
+                                    <button
+                                        class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-[#0B1F4D] text-white hover:bg-[#1F3F8F] transition-colors font-label-ui text-label-ui font-semibold shadow-md"
+                                        type="submit">
+                                        <span>Send My Enquiry</span>
+                                        <span class="text-tertiary">✦</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="relative w-full bg-primary-container overflow-hidden pt-space-xl pb-space-lg">
+        <div
+            class="pointer-events-none absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary-container via-primary-container to-surface-container-lowest">
+        </div>
+        <div class="relative z-10 w-full px-gutter md:px-margin lg:px-margin-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl">
+                <div class="flex flex-col gap-space-sm">
+                    <div class="flex items-center gap-space-xs"><span class="font-headline-xl italic text-2xl font-bold text-tertiary border border-tertiary/60 rounded-full w-10 h-10 inline-flex items-center justify-center shrink-0">fe</span><span
+                            class="font-headline-md text-headline-md text-primary">Fusion Eventt</span></div>
+                    <p class="font-annotation text-annotation italic text-primary/80">mantra of joy</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Wedding planners, event planners and corporate event specialists, making every occasion a mantra of joy.</p>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-space-xs">Quick
+                        Links</h4>
+                    <nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a
+                            aria-current="page" class="transition-colors text-primary font-bold" data-path="home"
+                            href="#">Home</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about" href="#">About</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="gallery" href="#">Gallery</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="awards" href="#">Why Fusion</a></nav>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-space-xs">
+                        Services</h4>
+                    <nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-bold"><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="weddings" href="#">Wedding Planning</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="corporate" href="#">Corporate Events</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="celebrity-booking" href="#">Garba &amp; Navratri</a><a
+                            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="bespoke-decor" href="#">Birthday &amp; Baby Shower</a></nav>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-space-xs">
+                        Contact</h4>
+                    <div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+                        <p><span class="text-primary font-medium">Phone:</span>+91 73831 11466</p>
+                        <p><span class="text-primary font-medium">Email:</span>shyamal@fusionevent.in</p>
+                        <p><span class="text-primary font-medium">Studio:</span>14, Umiya Vijay Society, Shivranjani Cross Rd, Nehru Nagar, Satellite, Ahmedabad, Gujarat 380015
+                        </p>
+                        <p><span class="text-primary font-medium">Instagram:</span> @fusioneventaa</p>
+                    </div>
+                    <div class="flex items-center gap-space-sm mt-space-sm"><a aria-label="Instagram"
+                            class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a
+                            aria-label="Facebook"
+                            class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a
+                            aria-label="YouTube"
+                            class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a></div>
+                </div>
+            </div>
+            <div
+                class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                <p class="font-annotation text-annotation italic text-primary/80">Crafted with love for every
+                    celebration.</p>
+                <p class="font-label-ui text-label-ui text-on-surface-variant">© 2026 Fusion Eventt. All rights reserved.</p>
+            </div>
+        </div>
+        <div
+            class="pointer-events-none select-none overflow-hidden w-full flex justify-center -mb-8 mt-space-sm opacity-5">
+            <span
+                class="font-headline-xl text-[140px] md:text-[220px] font-bold tracking-widest text-primary uppercase whitespace-nowrap leading-none">FUSION</span>
+        </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-50"><a aria-label="Connect on WhatsApp"
+            class="w-14 h-14 rounded-full bg-tertiary-container hover:bg-secondary-container text-tertiary hover:text-on-secondary-container shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center transition-transform hover:scale-110"
+            href="#"><span class="material-symbols-outlined text-[28px]">chat</span></a></div>
+</body>
+
+</html>
